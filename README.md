@@ -1,170 +1,153 @@
-# 🕹️ Retro Arcade Cabinet Portfolio
+# Prasannaraj Portfolio
 
-A highly immersive, premium 3D portfolio built with React, Three.js, and React Three Fiber. Features a fully interactive arcade cabinet with CRT screen effects, synthesizer audio, and a complete portfolio interface.
+> Interactive Windows 11-inspired AI/ML engineer portfolio.
 
-## ✨ Features
+An interactive desktop operating system environment presenting the engineering projects, research milestones, verified credentials, and technical background of **Prasannaraj**, an AI / ML Engineer and BE Artificial Intelligence & Machine Learning student at Sri Sairam College of Engineering, Bangalore.
 
-### 3D Environment
-- **Arcade Room** — Dark ambient 1980s room with neon lights, grid floor, floating dust particles
-- **Arcade Cabinet** — Detailed 3D model with wood-textured side panels, glowing decals, and physical controls
-- **CRT Shader** — Custom GLSL shader with curved distortion, moving scanlines, phosphor glow, and vignette
-- **Post-Processing** — Bloom effects for neon glow and screen glare
+*Disclaimer: This portfolio is an independent creative project inspired by the visual design and window interaction patterns of Windows 11 Fluent Design. It is not an official Microsoft product and is not affiliated with or endorsed by Microsoft Corporation.*
 
-### Interactive Controls
-- **Joystick** — Click and drag to tilt dynamically with audio feedback
-- **Action Buttons** — 4 colored buttons (Red, Orange, Cyan, Green) with hover glow and depression
-- **Coin Slot** — Click "INSERT COIN" for double-pitched chime and score boost
-- **Camera System** — Smooth lerp transitions between room overview and screen close-up
+---
 
-### Screen Content (2D in 3D)
-- **HUD** — Live score counter, stage tracker, player info, health bar
-- **Hero Section** — Typewriter headline, animated 8-bit mascot, stats grid, CTA buttons
-- **Works Section** — 6 game cartridge cards with hover effects and project details
-- **Stack Section** — Interactive skill grid with LED indicators and proficiency bars
-- **Terminal** — Working CLI with commands: `help`, `about`, `skills`, `works`, `contact`, `clear`, `reboot`
-- **Contact Form** — Encrypted comms console with transmission animation
+## Overview
 
-### Audio (Web Audio API)
-- **Boot** — Rising synth-wave arpeggio
-- **Hover** — Quick high-pitched blip
-- **Click** — Satisfying electronic click
-- **Coin** — Double-pitched metallic chime
-- **Success** — Uplifting 8-bit victory fanfare
-- **Joystick** — Movement feedback tone
+Unlike traditional dashboard-based portfolios, this project structures information discovery strictly through native-style desktop applications:
+- **Clean Desktop**: High-resolution wallpaper canvas with authentic desktop shortcuts, restrained negative space, and right-click desktop context menu.
+- **File Explorer (Projects)**: Browse 8 production AI projects with breadcrumb paths (`This PC > Projects`), ribbon actions, left navigation tree, and detailed engineering case studies.
+- **Settings (Skills)**: Windows 11 Settings architecture with administrator profile header, domain categorization, and structured capability lists.
+- **Document Viewer (Resume)**: Native document reader toolbar (`Print / PDF`, `LinkedIn`, `GitHub`) with responsive paper-sheet typography.
+- **Windows Terminal**: PowerShell console canvas (`PS C:\Users\Prasannaraj>`) supporting interactive portfolio commands (`whoami`, `projects`, `skills`, `clear`, etc.).
+- **AI Research Lab**: Engineering workbench featuring pipeline architecture dataflows, model catalogs, and verification assertions.
+- **This PC (System Properties)**: Candidate specifications, hardware configurations, and verified metrics.
 
-## 🚀 Quick Start
+---
+
+## Features
+
+- **Window Management System**:
+  - Dragging, resizing, minimizing to taskbar, maximizing/restoring, and z-index focus stacking.
+  - Strict 8px window geometry and 34px title bar chrome with red `#E81123` close control.
+- **Start Menu**:
+  - Centered Windows 11 flyout with quick search (`Ctrl + K`), pinned core apps, recommended recent project shortcuts, and user profile power menu.
+- **Docked Taskbar**:
+  - Centered app launcher with active window indicator pills, system tray (clock, audio, network, notifications), and recruiter fast-track mode.
+- **Prasanna AI Assistant**:
+  - Built-in intelligent assistant strictly scoped to verified portfolio knowledge, answering questions without external token leaks or hallucinations.
+- **Responsive Architecture**:
+  - Fully responsive from mobile devices (375px–414px) to 4K displays (1920px+).
+
+---
+
+## Technology Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) 16.3.6 (App Router, Turbopack)
+- **Runtime & UI**: [React](https://react.dev/) 19.2.8
+- **Language**: [TypeScript](https://www.typescriptlang.org/) 5
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) v4 & Vanilla CSS Design Tokens
+- **Iconography**: Official [Microsoft Fluent UI System Icons](https://github.com/microsoft/fluentui-system-icons) (`@fluentui/react-icons`) and authentic Windows 11 vector assets
+- **Animation**: [Framer Motion](https://www.framer.com/motion/)
+- **Deployment & Hosting**: [Vercel](https://vercel.com/)
+
+---
+
+## Featured Projects
+
+1. **TRUST-CV / BLOCK SENTINAL**: Offline air-gapped Computer Vision integrity assurance platform with cryptographic evidence verification (**210 / 210 passing tests**).
+2. **SATQUERY AI**: Multispectral satellite image visual question answering (VQA) using dual-branch ResNet-18 and attention networks.
+3. **CRAWLNEWS**: Full-stack multi-agent news intelligence and swarm ingestion engine built with Node.js, Express, Playwright, and RSS parsers.
+4. **FAKEO**: AI-powered misinformation detection classifier with XGBoost, spaCy, and Tesseract OCR.
+5. **URBANBLOOM AI**: Smart urban agriculture and automated irrigation ecosystem with ESP32 IoT microcontrollers and Gemini AI telemetry.
+6. **PLAYER RE-IDENTIFICATION**: Real-time sports computer vision tracking system utilizing YOLOv5 and DeepSORT.
+7. **RENTYOURMATE**: Trusted companion booking marketplace built on Flutter, Node.js, and PostgreSQL.
+8. **CHEST X-RAY AI**: Radiographic pulmonary disease localization using DenseNet121, U-Net, and Grad-CAM interpretability.
+
+---
+
+## AI Assistant (Prasanna AI)
+
+Prasanna AI operates under strict boundary guardrails:
+- **Scope**: Answers questions exclusively regarding Prasannaraj's projects, experience, skills, certifications, and contact details.
+- **Privacy & Safety**: Client-side deterministic knowledge engine requiring no external API credentials, eliminating API key leakage risks.
+- **Fallback Response**: Unrelated queries receive:
+  > *"I can only answer questions about Prasannaraj and information available in this portfolio."*
+
+---
+
+## Local Development
 
 ### Prerequisites
-- Node.js 18+ 
-- npm or yarn
+- Node.js 18.18+ or 20+
+- npm 9+ or pnpm 8+
 
-### Installation
+### Setup Instructions
 
 ```bash
-# 1. Navigate to the project directory
-cd arcade-portfolio
+# 1. Clone the repository
+git clone https://github.com/your-username/prasannaraj-portfolio.git
+cd prasannaraj-portfolio
 
 # 2. Install dependencies
 npm install
 
-# 3. Start the development server
+# 3. Start local development server
 npm run dev
 ```
 
-The app will be available at **http://localhost:3000**
-
-### Build for Production
-
-```bash
-npm run build
-```
-
-Output will be in the `dist/` directory.
-
-## 🎮 Controls & Interaction
-
-| Action | How To |
-|--------|--------|
-| Start the app | Click or press any key during boot sequence |
-| Enter "Full Play Mode" | Double-click the CRT screen or click "INSERT COIN" |
-| Return to room view | Click the "BACK" button on cabinet top |
-| Tilt joystick | Click and drag the joystick ball |
-| Press buttons | Click or hover over colored action buttons |
-| Navigate screen | Use the tab navigation bar on the screen |
-| Type in terminal | Click terminal input and type commands |
-
-## 🛠️ Tech Stack
-
-- **Framework**: React 18 + Vite
-- **3D Engine**: Three.js + @react-three/fiber + @react-three/drei
-- **Post-Processing**: @react-three/postprocessing (Bloom)
-- **State**: Zustand
-- **Styling**: Tailwind CSS
-- **Audio**: Web Audio API (synthesizer-generated, no external files)
-- **Fonts**: Press Start 2P, VT323, Share Tech Mono (Google Fonts)
-
-## 📁 Project Structure
-
-```
-arcade-portfolio/
-├── public/
-│   └── arcade-icon.svg
-├── src/
-│   ├── components/
-│   │   ├── arcade/
-│   │   │   ├── ArcadeScene.tsx      # Main 3D scene composition
-│   │   │   ├── ArcadeCabinet.tsx    # Cabinet model + controls
-│   │   │   ├── ArcadeRoom.tsx       # Room environment
-│   │   │   ├── FloatingDust.tsx     # Particle system
-│   │   │   ├── CameraController.tsx # Camera transitions
-│   │   │   └── CRTShader.tsx        # Custom GLSL shader
-│   │   ├── screen/
-│   │   │   ├── ArcadeScreen.tsx     # 2D UI projected on 3D
-│   │   │   ├── HUD.tsx              # Score/stage header
-│   │   │   ├── Navigation.tsx       # Tab navigation
-│   │   │   ├── HeroSection.tsx      # Landing page
-│   │   │   ├── WorksSection.tsx     # Portfolio cards
-│   │   │   ├── StackSection.tsx     # Skills grid
-│   │   │   ├── TerminalSection.tsx  # Interactive CLI
-│   │   │   └── ContactSection.tsx   # Contact form
-│   │   └── BootSequence.tsx         # Terminal boot animation
-│   ├── hooks/
-│   │   ├── useArcadeStore.ts        # Zustand state
-│   │   └── useTypewriter.ts         # Typewriter effect
-│   ├── lib/
-│   │   └── AudioManager.ts          # Web Audio API synth
-│   ├── App.tsx                      # Main app
-│   ├── main.tsx                     # Entry point
-│   └── index.css                    # Global styles + animations
-├── index.html
-├── package.json
-├── vite.config.ts
-├── tailwind.config.js
-├── tsconfig.json
-└── postcss.config.js
-```
-
-## 🎨 Customization
-
-### Changing Colors
-Edit `tailwind.config.js`:
-```js
-colors: {
-  'neon-pink': '#ff00ff',
-  'neon-cyan': '#00ffff',
-  // ...
-}
-```
-
-### Adding Projects
-Edit `src/components/screen/WorksSection.tsx`:
-```js
-const PROJECTS = [
-  {
-    title: 'YOUR PROJECT',
-    category: 'CATEGORY',
-    description: 'Description here',
-    tech: ['React', 'Three.js'],
-    color: '#ff00ff',
-    stars: 100,
-    forks: 20,
-  },
-  // ...
-]
-```
-
-### Adding Terminal Commands
-Edit `src/components/screen/TerminalSection.tsx`:
-```js
-const COMMANDS = {
-  yourcommand: ['Line 1', 'Line 2'],
-}
-```
-
-## 📝 License
-
-MIT License — feel free to use this as a template for your own portfolio!
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-Built with 💜 and a lot of caffeine by a creative developer who misses the 80s.
+## Environment Variables
+
+Copy `.env.example` to `.env.local` if custom runtime configurations are needed:
+
+```bash
+cp .env.example .env.local
+```
+
+| Variable | Description | Default |
+| :--- | :--- | :--- |
+| `NEXT_PUBLIC_SITE_URL` | Public canonical site URL for SEO metadata | `https://prasannaraj.dev` |
+
+*Note: No secret keys are required to build or run the portfolio.*
+
+---
+
+## Production Build
+
+To test the production build locally:
+
+```bash
+# Build the production bundle
+npm run build
+
+# Start the production server
+npm run start
+```
+
+Turbopack will compile optimized static pages with zero TypeScript errors.
+
+---
+
+## Deployment
+
+### GitHub
+```bash
+git init
+git add .
+git commit -m "Initial commit: Windows 11 AI Engineer Portfolio"
+git branch -M main
+git remote add origin https://github.com/<your-username>/prasannaraj-portfolio.git
+git push -u origin main
+```
+
+### Vercel Deployment
+1. Log in to [Vercel](https://vercel.com/).
+2. Click **Add New...** → **Project**.
+3. Import your `prasannaraj-portfolio` GitHub repository.
+4. Vercel automatically detects **Next.js**.
+5. Leave default build settings:
+   - **Framework Preset**: Next.js
+   - **Build Command**: `next build`
+   - **Output Directory**: `.next`
+   - **Install Command**: `npm install`
+6. Click **Deploy**.

@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root {
+  --bg-desktop: #0B0D10;
+  --surface-base: #15171B;
+  --surface-elevated: #1C1F24;
+  --surface-glass: rgba(25, 28, 34, 0.72);
+  --surface-glass-border: rgba(255, 255, 255, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.04);
+  --accent-primary: #4CC2FF;
+  --accent-secondary: #7AA2FF;
+  --text-primary: #F5F7FA;
+  --text-secondary: #A8AFBA;
+  --text-muted: #6B7280;
+  --color-success: #6CCB8A;
+  --color-warning: #F2C94C;
+  --color-error: #FF6B6B;
+}
+
+body {
+  background-color: var(--bg-desktop);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbars for Fluent Design */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* Acrylic & Mica Surface Classes */
+.mica-surface {
+  background: rgba(21, 23, 27, 0.82);
+  backdrop-filter: blur(28px) saturate(140%);
+  -webkit-backdrop-filter: blur(28px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mica-surface-elevated {
+  background: rgba(28, 31, 36, 0.88);
+  backdrop-filter: blur(36px) saturate(150%);
+  -webkit-backdrop-filter: blur(36px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.fluent-glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.fluent-glass-hover:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+/* Subtle glow for accents */
+.accent-glow {
+  box-shadow: 0 0 20px -4px rgba(76, 194, 255, 0.25);
+}
+
+.window-shadow {
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.window-shadow-focused {
+  box-shadow: 0 22px 60px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(76, 194, 255, 0.35);
+}
+
+/* Wallpaper Ambient Mesh Animations */
+@keyframes ambientDrift {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -20px) scale(1.05);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.98);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-ambient-slow {
+  animation: ambientDrift 28s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 12s ease-in-out infinite;
+}
