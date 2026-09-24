@@ -37,7 +37,7 @@ export function AboutWindow({ onOpenApp }: AboutWindowProps) {
               {profileData.role}
             </p>
             <p className="text-[11px] text-[#A8AFBA] mt-0.5">
-              Windows 11 Pro for Workstations • Portfolio OS Shell
+              Windows 11 Pro for Workstations • Prasanna Portfolio
             </p>
           </div>
 

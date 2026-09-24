@@ -10,11 +10,11 @@ export function BootScreen({ onBootComplete }: BootScreenProps) {
   const [stepIndex, setStepIndex] = useState(0);
 
   const steps = [
-    "Initializing workspace...",
-    "Loading models & neural rigs...",
-    "Mounting file explorer...",
-    "Loading AI Lab & Copilot...",
-    "System ready.",
+    "Loading portfolio workspace...",
+    "Loading engineering projects...",
+    "Preparing File Explorer & Terminal...",
+    "Loading AI Research Lab...",
+    "Ready.",
   ];
 
   useEffect(() => {
@@ -47,10 +47,10 @@ export function BootScreen({ onBootComplete }: BootScreenProps) {
 
         <div className="space-y-1">
           <h1 className="text-xl font-bold tracking-widest text-[#F5F7FA]">
-            PRASANNARAJ OS
+            PRASANNA PORTFOLIO
           </h1>
           <p className="text-[11px] text-[#A8AFBA] font-mono tracking-wider">
-            AI WORKSTATION KERNEL v2.4
+            AI / ML ENGINEER WORKSPACE
           </p>
         </div>
 
