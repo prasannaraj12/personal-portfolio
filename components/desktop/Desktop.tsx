@@ -89,7 +89,7 @@ export function Desktop() {
   const [windows, setWindows] = useState<Record<string, WindowState>>({
     about: {
       id: "about",
-      title: "This PC",
+      title: "Prasannaraj's Workstation",
       icon: "ThisPC",
       isOpen: false,
       isMinimized: false,
@@ -543,8 +543,8 @@ export function Desktop() {
           isMaximized={windows.about.isMaximized}
           zIndex={windows.about.zIndex}
           isActive={activeWindowId === "about"}
-          initialWidth={800}
-          initialHeight={560}
+          initialWidth={880}
+          initialHeight={620}
           onFocus={() => bringToFront("about")}
           onClose={() => closeWindow("about")}
           onMinimize={() => minimizeWindow("about")}
