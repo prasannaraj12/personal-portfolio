@@ -23,6 +23,7 @@ import { ResumeWindow } from "../windows/ResumeWindow";
 import { ContactWindow } from "../windows/ContactWindow";
 import { DiagnosticsWindow } from "../windows/DiagnosticsWindow";
 import { RecycleBinWindow } from "../windows/RecycleBinWindow";
+import { AskAIWindow } from "../windows/AskAIWindow";
 import { TerminalWindow } from "../terminal/TerminalWindow";
 import { CopilotPanel } from "../chat/CopilotPanel";
 import { CommandPalette } from "../search/CommandPalette";
@@ -41,6 +42,7 @@ import {
   Win11TerminalIcon,
   Win11ResumeIcon,
   Win11ContactIcon,
+  Win11AskAIIcon,
 } from "@/components/icons/Win11FluentIcons";
 import {
   DesktopRegular,
@@ -125,6 +127,15 @@ export function Desktop() {
       id: "ai-lab",
       title: "AI Research Lab",
       icon: "AILab",
+      isOpen: false,
+      isMinimized: false,
+      isMaximized: false,
+      zIndex: 9,
+    },
+    "ask-ai": {
+      id: "ask-ai",
+      title: "Ask AI",
+      icon: "AskAI",
       isOpen: false,
       isMinimized: false,
       isMaximized: false,
@@ -377,10 +388,10 @@ export function Desktop() {
 
   // Authentic Windows 11 Desktop Icons connected to Portfolio content
   // Row 1: [This PC]              [Resume]
-  // Row 2: [Recycle Bin]          [LinkedIn]
-  // Row 3: [Projects]             [GitHub]
-  // Row 4: [AI Lab]               [Contact & Inquiries]
-  // Row 5: [Settings]             [Terminal]
+  // Row 2: [Projects]             [Contact]
+  // Row 3: [LinkedIn]             [GitHub]
+  // Row 4: [Ask AI]               [Settings]
+  // Row 5: [Terminal]             [Recycle Bin]
   const desktopIcons = [
     // Column 1
     {
@@ -390,28 +401,28 @@ export function Desktop() {
       action: () => openApp("about"),
     },
     {
-      id: "recycle-bin",
-      label: "Recycle Bin",
-      icon: "RecycleBin",
-      action: () => openApp("recycle-bin"),
-    },
-    {
       id: "projects",
       label: "Projects",
       icon: "Folder",
       action: () => openApp("projects"),
     },
     {
-      id: "ai-lab",
-      label: "AI Lab",
-      icon: "AILab",
-      action: () => openApp("ai-lab"),
+      id: "linkedin",
+      label: "LinkedIn",
+      icon: "LinkedIn",
+      href: profileData.links.linkedin,
     },
     {
-      id: "settings",
-      label: "Settings",
-      icon: "Settings",
-      action: () => openApp("skills"),
+      id: "ask-ai",
+      label: "Ask AI",
+      icon: "AskAI",
+      action: () => openApp("ask-ai"),
+    },
+    {
+      id: "terminal",
+      label: "Terminal",
+      icon: "Terminal",
+      action: () => openApp("terminal"),
     },
     // Column 2
     {
@@ -421,10 +432,10 @@ export function Desktop() {
       action: () => openApp("resume"),
     },
     {
-      id: "linkedin",
-      label: "LinkedIn",
-      icon: "LinkedIn",
-      href: profileData.links.linkedin,
+      id: "contact",
+      label: "Contact",
+      icon: "Contact",
+      action: () => openApp("contact"),
     },
     {
       id: "github",
@@ -433,16 +444,16 @@ export function Desktop() {
       href: profileData.links.github,
     },
     {
-      id: "contact",
-      label: "Contact & Inquiries",
-      icon: "Contact",
-      action: () => openApp("contact"),
+      id: "settings",
+      label: "Settings",
+      icon: "Settings",
+      action: () => openApp("skills"),
     },
     {
-      id: "terminal",
-      label: "Terminal",
-      icon: "Terminal",
-      action: () => openApp("terminal"),
+      id: "recycle-bin",
+      label: "Recycle Bin",
+      icon: "RecycleBin",
+      action: () => openApp("recycle-bin"),
     },
   ];
 
@@ -785,6 +796,26 @@ export function Desktop() {
           onMaximize={() => toggleMaximizeWindow("contact")}
         >
           <ContactWindow />
+        </WindowFrame>
+
+        {/* Ask AI Window */}
+        <WindowFrame
+          id="ask-ai"
+          title="Ask AI"
+          icon={<Win11AskAIIcon className="w-4 h-4" />}
+          isOpen={windows["ask-ai"].isOpen}
+          isMinimized={windows["ask-ai"].isMinimized}
+          isMaximized={windows["ask-ai"].isMaximized}
+          zIndex={windows["ask-ai"].zIndex}
+          isActive={activeWindowId === "ask-ai"}
+          initialWidth={720}
+          initialHeight={520}
+          onFocus={() => bringToFront("ask-ai")}
+          onClose={() => closeWindow("ask-ai")}
+          onMinimize={() => minimizeWindow("ask-ai")}
+          onMaximize={() => toggleMaximizeWindow("ask-ai")}
+        >
+          <AskAIWindow onOpenApp={openApp} />
         </WindowFrame>
 
         {/* Diagnostics Window */}

@@ -12,7 +12,7 @@ export const experienceData: ExperienceItem[] = [
     highlights: [
       "Engineered automated data ingestion and news intelligence pipelines.",
       "Developed and integrated multi-agent workflows for information extraction and verification.",
-      "Collaborated on production backend services and data modeling for AI-driven platforms.",
+      "Collaborated on production backend services and data modeling for intelligence platforms.",
       "Contributed to clean architectural patterns spanning frontend interfaces and machine learning backends.",
     ],
     technologies: [

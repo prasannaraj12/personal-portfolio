@@ -16,11 +16,11 @@ import {
   Win11ThisPCIcon,
   Win11RecycleBinIcon,
   Win11FolderIcon,
-  Win11AILabIcon,
   Win11SettingsIcon,
   Win11TerminalIcon,
   Win11ResumeIcon,
   Win11ContactIcon,
+  Win11AskAIIcon,
 } from "@/components/icons/Win11FluentIcons";
 import { profileData } from "@/data/profile";
 
@@ -59,9 +59,9 @@ export function StartMenu({
       icon: <Win11FolderIcon className="w-8 h-8" />,
     },
     {
-      id: "ai-lab",
-      label: "AI Lab",
-      icon: <Win11AILabIcon className="w-8 h-8" />,
+      id: "ask-ai",
+      label: "Ask AI",
+      icon: <Win11AskAIIcon className="w-8 h-8" />,
     },
     {
       id: "resume",
@@ -70,7 +70,7 @@ export function StartMenu({
     },
     {
       id: "contact",
-      label: "Contact & Inquiries",
+      label: "Contact",
       icon: <Win11ContactIcon className="w-8 h-8" />,
     },
     {
@@ -97,7 +97,7 @@ export function StartMenu({
       id: "project-satquery-ai",
       title: "SATQUERY AI",
       desc: "Satellite VQA & ResNet-18 • Yesterday",
-      icon: <Win11AILabIcon className="w-6 h-6" />,
+      icon: <Win11FolderIcon className="w-6 h-6" />,
       action: () => onOpenApp("project-satquery-ai"),
     },
     {

@@ -25,7 +25,7 @@ export function CopilotPanel({ isOpen, onClose, onOpenApp }: CopilotPanelProps) 
     {
       id: "initial-1",
       sender: "assistant",
-      text: "Hello! I am **Prasanna AI**, an intelligent portfolio assistant strictly scoped to Prasannaraj's verified projects, research, technical skills, and experience. How can I assist you?",
+      text: "Ask me about Prasannaraj's projects, technical skills, experience, or contact information.",
       timestamp: "Just now",
       suggestions: [
         "Tell me about Prasannaraj",
@@ -168,40 +168,9 @@ export function CopilotPanel({ isOpen, onClose, onOpenApp }: CopilotPanelProps) 
                     : "bg-[#202020] text-[#D4D4D8] border border-[#2d2d2d]"
                 }`}
               >
-                <div className="whitespace-pre-wrap">{msg.text}</div>
-
-                {/* Source Verification Chips */}
-                {msg.sources && msg.sources.length > 0 && (
-                  <div className="mt-2.5 pt-2 border-t border-white/[0.08] flex items-center gap-1.5 flex-wrap">
-                    <span className="text-[9px] uppercase tracking-wider text-[#A8AFBA] font-mono">
-                      Sources:
-                    </span>
-                    {msg.sources.map((src) => (
-                      <span
-                        key={src}
-                        onClick={() => {
-                          const appMap: Record<string, string> = {
-                            ABOUT: "about",
-                            PROJECTS: "projects",
-                            SKILLS: "skills",
-                            EXPERIENCE: "experience",
-                            EDUCATION: "education",
-                            CERTIFICATIONS: "certifications",
-                            ACHIEVEMENTS: "achievements",
-                            CONTACT: "contact",
-                            RESUME: "resume",
-                            "AI LAB": "ai-lab",
-                          };
-                          const app = appMap[src];
-                          if (app && onOpenApp) onOpenApp(app);
-                        }}
-                        className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded-[3px] bg-white/[0.08] hover:bg-[#4CC2FF]/20 text-[#4CC2FF] border border-white/[0.1] transition-colors cursor-pointer"
-                      >
-                        {src}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                <div className="whitespace-pre-wrap">
+                  {msg.text.replace(/\*\*(.*?)\*\*/g, "$1").replace(/\*(.*?)\*/g, "$1")}
+                </div>
               </div>
 
               {/* Timestamp */}

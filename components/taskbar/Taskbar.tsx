@@ -10,11 +10,11 @@ import {
 import {
   Win11ThisPCIcon,
   Win11FolderIcon,
-  Win11AILabIcon,
   Win11SettingsIcon,
   Win11TerminalIcon,
   Win11ResumeIcon,
   Win11ContactIcon,
+  Win11AskAIIcon,
 } from "@/components/icons/Win11FluentIcons";
 import { SystemTray } from "./SystemTray";
 import { QuickSettingsPanel } from "./QuickSettingsPanel";
@@ -53,9 +53,9 @@ export function Taskbar({
       icon: <Win11FolderIcon className="w-6 h-6" />,
     },
     {
-      id: "ai-lab",
-      label: "AI Research Lab",
-      icon: <Win11AILabIcon className="w-6 h-6" />,
+      id: "ask-ai",
+      label: "Ask AI",
+      icon: <Win11AskAIIcon className="w-6 h-6" />,
     },
     {
       id: "resume",
@@ -64,7 +64,7 @@ export function Taskbar({
     },
     {
       id: "contact",
-      label: "Contact & Inquiries",
+      label: "Contact",
       icon: <Win11ContactIcon className="w-6 h-6" />,
     },
     {
@@ -74,12 +74,12 @@ export function Taskbar({
     },
     {
       id: "about",
-      label: "This PC (About)",
+      label: "This PC",
       icon: <Win11ThisPCIcon className="w-6 h-6" />,
     },
     {
       id: "skills",
-      label: "Settings (Skills)",
+      label: "Settings",
       icon: <Win11SettingsIcon className="w-6 h-6" />,
     },
   ];

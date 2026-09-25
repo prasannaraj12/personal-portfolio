@@ -10,6 +10,7 @@ import {
   Win11TerminalIcon,
   Win11ResumeIcon,
   Win11ContactIcon,
+  Win11AskAIIcon,
 } from "@/components/icons/Win11FluentIcons";
 
 interface DesktopIconProps {
@@ -40,6 +41,8 @@ export function DesktopIcon({
         return <Win11FolderIcon className="w-12 h-12" />;
       case "AILab":
         return <Win11AILabIcon className="w-12 h-12" />;
+      case "AskAI":
+        return <Win11AskAIIcon className="w-12 h-12" />;
       case "Settings":
         return <Win11SettingsIcon className="w-12 h-12" />;
       case "Terminal":

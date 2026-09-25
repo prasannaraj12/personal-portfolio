@@ -4,12 +4,12 @@ export const projectsData: ProjectItem[] = [
   {
     id: "trust-cv",
     title: "TRUST-CV / BLOCK SENTINAL",
-    subtitle: "Offline Computer Vision Integrity Assurance Platform",
+    subtitle: "Computer Vision Integrity Assurance Platform",
     category: "Computer Vision",
     badge: "210 / 210 Tests Passing",
     iconName: "ShieldCheck",
     overview:
-      "An offline, air-gapped computer vision platform engineered to guarantee cryptographic evidence integrity, tamper detection, and deterministic verification for sensitive remote sensing and visual datasets.",
+      "Air-gapped Computer Vision Integrity Assurance Platform. Cryptographically verifiable evidence chain. 210/210 tests passing.",
     problem:
       "Sensitive remote sensing visual assets and mission-critical computer vision models are vulnerable to silent data tampering, man-in-the-middle attacks, and environmental image degradation, especially in air-gapped or offline critical infrastructure.",
     solution:
@@ -60,12 +60,12 @@ export const projectsData: ProjectItem[] = [
   {
     id: "satquery-ai",
     title: "SATQUERY AI",
-    subtitle: "AI Satellite Image Analysis via Natural Language Queries",
+    subtitle: "Multispectral Satellite VQA & Captioning",
     category: "Computer Vision",
     badge: "Vision-Language",
     iconName: "Satellite",
     overview:
-      "A multimodal vision-language system that allows remote sensing analysts and researchers to query complex multispectral satellite imagery using natural conversational language.",
+      "Multispectral satellite image analysis with natural-language visual question answering and image captioning.",
     problem:
       "Multispectral satellite data is notoriously complex, requiring domain knowledge in geographic information systems (GIS) and manual band analysis to identify environmental changes, land cover, and infrastructure.",
     solution:
@@ -114,12 +114,12 @@ export const projectsData: ProjectItem[] = [
   {
     id: "crawlnews",
     title: "CRAWLNEWS",
-    subtitle: "Full-Stack AI News Intelligence & Verification Platform",
+    subtitle: "Multi-Agent News Intelligence Platform",
     category: "Generative AI / Agents",
     badge: "Multi-Agent System",
     iconName: "Newspaper",
     overview:
-      "An automated multi-agent news intelligence platform that orchestrates ingestion, deduplication, AI relevance filtering, fact verification, and categorization into an actionable executive dashboard.",
+      "Multi-agent AI news intelligence platform for collection, verification, categorization and summarization.",
     problem:
       "Information overload, sensationalism, and repetitive syndicated news feeds overwhelm analysts, making real-time verification and unbiased summarization labor-intensive.",
     solution:
@@ -172,12 +172,12 @@ export const projectsData: ProjectItem[] = [
   {
     id: "fakeo",
     title: "FAKEO",
-    subtitle: "AI-Powered Multimodal Fake News Detection Platform",
+    subtitle: "Multimodal Misinformation Detection",
     category: "Machine Learning / NLP",
     badge: "NLP + OCR",
     iconName: "FileSearch",
     overview:
-      "An automated misinformation identification platform combining classical machine learning, TF-IDF vectorization, named entity recognition, and optical character recognition to scrutinize claims in articles and digital screenshots.",
+      "Multimodal fake-news detection using XGBoost, TF-IDF, OCR and NLP.",
     problem:
       "Viral misinformation spreads rapidly through forged screenshots, modified headline images, and hyper-partisan text snippets that evade simple keyword-based blacklist filters.",
     solution:
@@ -227,12 +227,12 @@ export const projectsData: ProjectItem[] = [
   {
     id: "urbanbloom-ai",
     title: "URBANBLOOM AI",
-    subtitle: "AI-Driven Smart Greenery & Intelligent Irrigation Ecosystem",
+    subtitle: "Smart Irrigation & Soil-Moisture Ecosystem",
     category: "IoT & Hardware",
-    badge: "IoT + Gemini AI",
+    badge: "IoT + Gemini",
     iconName: "Cpu",
     overview:
-      "An intelligent urban horticulture and automated irrigation hardware system combining microcontrollers, soil moisture telemetry, and Google Gemini AI for adaptive plant health diagnostics and water conservation.",
+      "IoT-based smart irrigation system using ESP32, soil-moisture sensing and Gemini integration.",
     problem:
       "Urban gardening and vertical farming often suffer from inconsistent manual watering, plant disease oversight, and excessive water wastage in arid environments.",
     solution:
@@ -282,12 +282,12 @@ export const projectsData: ProjectItem[] = [
   {
     id: "player-reid",
     title: "PLAYER RE-IDENTIFICATION",
-    subtitle: "Computer Vision Sports Analytics & Spatial Tracking System",
+    subtitle: "Sports Vision Tracking & Re-ID Pipeline",
     category: "Computer Vision",
     badge: "PyTorch & OpenCV",
     iconName: "Crosshair",
     overview:
-      "A deep learning computer vision pipeline designed for real-time player detection, visual feature re-identification, and trajectory tracking across complex sports broadcast footage.",
+      "Computer vision pipeline for player tracking and re-identification using YOLOv5 and DeepSORT.",
     problem:
       "Frequent player occlusions, rapid jersey color overlap, camera pan jitter, and scale variations cause standard bounding box trackers to lose identity associations and scramble tracking trajectories.",
     solution:
@@ -335,12 +335,12 @@ export const projectsData: ProjectItem[] = [
   {
     id: "rentyourmate",
     title: "RENTYOURMATE",
-    subtitle: "Trusted Companion Marketplace Platform",
+    subtitle: "Trusted Companion Marketplace",
     category: "Full-Stack AI",
     badge: "Verified Marketplace",
     iconName: "Users",
     overview:
-      "A verified companion marketplace engineered around trust, safety, privacy, and structured bookings for shared activities, events, and professional accompaniment. (Note: strictly NOT a dating platform).",
+      "Trusted companion marketplace with identity verification, KYC and secure booking workflows.",
     problem:
       "People seeking platonic event companions, travel buddies, or professional networking accompaniment lack safe, verified platforms with strict identity governance, background checks, and structured escrow payments.",
     solution:
@@ -389,13 +389,13 @@ export const projectsData: ProjectItem[] = [
   },
   {
     id: "chest-xray-ai",
-    title: "CHEST X-RAY AI (SACHIN LUNG)",
-    subtitle: "AI Chest X-Ray Disease Detection & Localization System",
+    title: "CHEST X-RAY AI",
+    subtitle: "Radiographic Disease Detection & Localization",
     category: "Computer Vision",
-    badge: "Medical AI Research",
+    badge: "Medical Imaging",
     iconName: "Activity",
     overview:
-      "A clinical research AI system designed for radiographic disease classification, pulmonary lesion localization, and visual interpretability via Grad-CAM saliency heatmaps.",
+      "Medical imaging pipeline combining U-Net segmentation, DenseNet121 classification and Grad-CAM explainability.",
     problem:
       "Deep learning models in healthcare often suffer from black-box opacity, creating hesitation among clinicians who need interpretable visual evidence alongside classification scores.",
     solution:
@@ -437,7 +437,7 @@ export const projectsData: ProjectItem[] = [
     stats: [
       { label: "Architecture", value: "DenseNet121 + U-Net" },
       { label: "Explainability", value: "Grad-CAM Heatmaps" },
-      { label: "Domain", value: "Healthcare AI Research" },
+      { label: "Domain", value: "Healthcare Research" },
     ],
   },
 ];

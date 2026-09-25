@@ -240,6 +240,18 @@ export function ProjectsWindow({ onSelectProject }: ProjectsWindowProps) {
           className="flex-1 p-4 overflow-y-auto"
           onClick={() => setSelectedProjectId(null)}
         >
+          {/* Section 3 & 13: Clean Explorer Structure */}
+          <div className="mb-4 pb-2 border-b border-[#282828] flex items-center justify-between">
+            <div>
+              <h2 className="text-xs font-bold text-white tracking-wider uppercase">
+                PROJECTS
+              </h2>
+              <p className="text-[11px] text-[#A8AFBA]">
+                {filteredProjects.length} projects
+              </p>
+            </div>
+          </div>
+
           {filteredProjects.length === 0 ? (
             <div className="h-48 flex flex-col items-center justify-center text-center text-[#A8AFBA]">
               <FolderRegular className="w-10 h-10 text-[#A8AFBA]/40 mb-2" />
@@ -247,7 +259,7 @@ export function ProjectsWindow({ onSelectProject }: ProjectsWindowProps) {
             </div>
           ) : viewMode === "icons" ? (
             /* Standard Windows 11 Folder Icon Grid */
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
               {filteredProjects.map((project) => {
                 const isSelected = selectedProjectId === project.id;
                 return (
@@ -258,21 +270,33 @@ export function ProjectsWindow({ onSelectProject }: ProjectsWindowProps) {
                       setSelectedProjectId(project.id);
                     }}
                     onDoubleClick={() => onSelectProject(project.id)}
-                    className={`flex flex-col items-center justify-center p-3 rounded-[4px] cursor-pointer transition-colors text-center select-none ${
+                    className={`flex flex-col items-start p-3 rounded-[6px] cursor-pointer transition-colors text-left select-none ${
                       isSelected
-                        ? "bg-[#0078D4]/25 border border-[#0078D4]/50 text-[#FFFFFF]"
-                        : "hover:bg-white/[0.05] border border-transparent text-[#E1E1E1]"
+                        ? "bg-[#0078D4]/25 border border-[#0078D4]/60 text-[#FFFFFF]"
+                        : "bg-[#202020] hover:bg-[#252525] border border-[#2d2d2d] text-[#E1E1E1]"
                     }`}
                   >
-                    <div className="w-12 h-12 flex items-center justify-center mb-1.5">
-                      <Win11FolderIcon className="w-11 h-11 drop-shadow-md" />
+                    <div className="flex items-center gap-2 mb-2 w-full">
+                      <div className="w-8 h-8 flex items-center justify-center shrink-0">
+                        <Win11FolderIcon className="w-8 h-8 drop-shadow-sm" />
+                      </div>
+                      <span className="text-xs font-semibold leading-tight text-white line-clamp-1">
+                        {project.title}
+                      </span>
                     </div>
-                    <span className="text-[11px] font-normal leading-tight line-clamp-2 max-w-[120px] break-words">
-                      {project.title}
-                    </span>
-                    <span className="text-[9px] text-[#A8AFBA] mt-0.5 line-clamp-1">
-                      {project.category}
-                    </span>
+
+                    <p className="text-[11px] text-[#A8AFBA] line-clamp-2 leading-relaxed mb-2.5">
+                      {project.overview}
+                    </p>
+
+                    <div className="mt-auto flex items-center justify-between w-full pt-1 border-t border-white/[0.06] text-[10px]">
+                      <span className="text-[#4CC2FF] truncate max-w-[120px]">
+                        {project.technologies.slice(0, 2).join(" · ")}
+                      </span>
+                      <span className="text-[#10B981] font-mono shrink-0">
+                        {project.badge}
+                      </span>
+                    </div>
                   </div>
                 );
               })}

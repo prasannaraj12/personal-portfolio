@@ -98,3 +98,16 @@ export function Win11ContactIcon({ className = "w-11 h-11" }: { className?: stri
   );
 }
 
+// Windows 11 "Ask AI" Icon (Icons8 Windows 11 AI Assistant)
+export function Win11AskAIIcon({ className = "w-11 h-11" }: { className?: string }) {
+  return (
+    <img
+      src="/icons/windows/brain.png"
+      alt="Ask AI"
+      className={`${className} object-contain`}
+      draggable={false}
+    />
+  );
+}
+
+

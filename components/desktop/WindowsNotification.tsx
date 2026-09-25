@@ -11,7 +11,7 @@ interface WindowsNotificationProps {
 
 export function WindowsNotification({
   title = "Welcome to Prasannaraj's Portfolio",
-  message = "Explore projects, resume, AI Lab, and contact information.",
+  message = "Explore projects, resume, Ask AI, and contact information.",
   duration = 5500,
 }: WindowsNotificationProps) {
   const [isVisible, setIsVisible] = useState(true);
