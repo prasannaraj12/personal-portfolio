@@ -188,7 +188,7 @@ export function Desktop() {
     },
     resume: {
       id: "resume",
-      title: "Prasannaraj_Resume.pdf - Document Viewer",
+      title: "Resume — Prasannaraj",
       icon: "Resume",
       isOpen: false,
       isMinimized: false,
@@ -748,8 +748,8 @@ export function Desktop() {
           isMaximized={windows.resume.isMaximized}
           zIndex={windows.resume.zIndex}
           isActive={activeWindowId === "resume"}
-          initialWidth={840}
-          initialHeight={600}
+          initialWidth={880}
+          initialHeight={680}
           onFocus={() => bringToFront("resume")}
           onClose={() => closeWindow("resume")}
           onMinimize={() => minimizeWindow("resume")}

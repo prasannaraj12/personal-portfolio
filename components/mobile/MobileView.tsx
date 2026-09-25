@@ -270,37 +270,48 @@ export function MobileView({ onOpenRecruiter }: { onOpenRecruiter?: () => void }
         )}
 
         {activeTab === "resume" && (
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <h2 className="text-sm font-bold text-[#F5F7FA]">Curriculum Vitae</h2>
-              <a
-                href={profileData.links.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="text-xs text-[#4CC2FF] underline"
-              >
-                LinkedIn
-              </a>
+          <div className="flex flex-col h-[75vh] space-y-3">
+            {/* Header Toolbar */}
+            <div className="flex items-center justify-between bg-white/[0.04] border border-white/[0.08] p-2.5 rounded-lg">
+              <div className="flex items-center gap-2 min-w-0">
+                <DocumentTextRegular className="w-4 h-4 text-[#4CC2FF] shrink-0" />
+                <span className="text-xs font-semibold text-white truncate">
+                  Prasannaraj_Resume.pdf
+                </span>
+              </div>
+
+              <div className="flex items-center gap-1.5 shrink-0">
+                <a
+                  href="/Prasannaraj_Resume.pdf"
+                  download="Prasannaraj_Resume.pdf"
+                  className="px-2.5 py-1 rounded bg-[#0078D4] hover:bg-[#106EBE] text-white text-[11px] font-medium transition-colors"
+                >
+                  Download
+                </a>
+                <button
+                  onClick={() => window.open("/Prasannaraj_Resume.pdf", "_blank")}
+                  className="p-1 rounded bg-white/[0.08] hover:bg-white/[0.14] text-white transition-colors"
+                  title="Open in Browser"
+                >
+                  <OpenRegular className="w-3.5 h-3.5" />
+                </button>
+                <button
+                  onClick={() => setActiveTab("home")}
+                  className="p-1 rounded bg-white/[0.08] hover:bg-white/[0.14] text-[#A8AFBA] hover:text-white transition-colors"
+                  title="Close Resume"
+                >
+                  <DismissRegular className="w-3.5 h-3.5" />
+                </button>
+              </div>
             </div>
 
-            <div className="p-4 rounded-xl bg-white/[0.02] border border-white/[0.06] space-y-3 text-xs">
-              <div>
-                <h3 className="font-bold text-[#F5F7FA]">{profileData.name}</h3>
-                <p className="text-[#4CC2FF]">{profileData.role}</p>
-                <p className="text-[#A8AFBA]">{profileData.location}</p>
-              </div>
-
-              <div className="border-t border-white/[0.06] pt-2">
-                <span className="font-bold text-[#A8AFBA] block mb-1">Education:</span>
-                <p className="text-[#F5F7FA]">{educationData[0].degree}</p>
-                <p className="text-[#A8AFBA]">{educationData[0].institution}</p>
-              </div>
-
-              <div className="border-t border-white/[0.06] pt-2">
-                <span className="font-bold text-[#A8AFBA] block mb-1">Experience:</span>
-                <p className="text-[#F5F7FA]">{experienceData[0].role} — {experienceData[0].company}</p>
-                <p className="text-[#A8AFBA]">{experienceData[0].description}</p>
-              </div>
+            {/* Embedded Native Mobile PDF Viewer */}
+            <div className="flex-1 rounded-lg overflow-hidden border border-white/[0.08] bg-white shadow-lg relative">
+              <iframe
+                src="/Prasannaraj_Resume.pdf#toolbar=0&navpanes=0"
+                className="w-full h-full border-0 block"
+                title="Prasannaraj Resume PDF"
+              />
             </div>
           </div>
         )}

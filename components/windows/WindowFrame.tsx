@@ -291,6 +291,9 @@ export function WindowFrame({
 
       {/* Window Body Container */}
       <div className="flex-1 overflow-auto bg-[#181818] text-[#F5F7FA] relative">
+        {(isDragging || isResizing !== null) && (
+          <div className="absolute inset-0 z-50 bg-transparent select-none pointer-events-auto" />
+        )}
         {children}
       </div>
 
