@@ -297,7 +297,7 @@ export function queryPortfolioKnowledge(userQuery: string): {
 
   if (query.includes("contact") || query.includes("email") || query.includes("reach") || query.includes("hire") || query.includes("linkedin") || query.includes("github")) {
     return {
-      answer: `You can connect with Prasannaraj through:\n\n• **Email:** contact.prasannaraj@gmail.com\n• **LinkedIn:** linkedin.com (Open via Start Menu or Contact app)\n• **GitHub:** github.com (Open via Desktop Icon or Terminal)\n• **Location:** Bangalore, India\n\nYou can also launch the **Contact** app right on this desktop to send a direct message!`,
+      answer: `You can connect with Prasannaraj through:\n\n• **Email:** prasannaraj.pr12@gmail.com\n• **LinkedIn:** linkedin.com (Open via Start Menu or Contact app)\n• **GitHub:** github.com (Open via Desktop Icon or Terminal)\n• **Location:** Bangalore, India\n\nYou can also launch the **Contact** app right on this desktop to send a direct message!`,
       sources: ["CONTACT"],
       suggestions: ["Open Resume", "Show me his AI projects", "Tell me about TRUST-CV"],
     };

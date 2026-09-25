@@ -20,9 +20,9 @@ export const profileData = {
     "Full-Stack AI Applications",
   ],
   links: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-    email: "contact.prasannaraj@gmail.com",
+    github: "https://github.com/prasannaraj12",
+    linkedin: "https://www.linkedin.com/in/prasanna-raj-r-0b50a7282/",
+    email: "prasannaraj.pr12@gmail.com",
   },
   systemStats: {
     projectsCount: 8,

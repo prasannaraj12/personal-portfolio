@@ -20,6 +20,7 @@ import {
   Win11SettingsIcon,
   Win11TerminalIcon,
   Win11ResumeIcon,
+  Win11ContactIcon,
 } from "@/components/icons/Win11FluentIcons";
 import { profileData } from "@/data/profile";
 
@@ -63,14 +64,19 @@ export function StartMenu({
       icon: <Win11AILabIcon className="w-8 h-8" />,
     },
     {
-      id: "skills",
-      label: "Settings",
-      icon: <Win11SettingsIcon className="w-8 h-8" />,
-    },
-    {
       id: "resume",
       label: "Resume",
       icon: <Win11ResumeIcon className="w-8 h-8" />,
+    },
+    {
+      id: "contact",
+      label: "Contact & Inquiries",
+      icon: <Win11ContactIcon className="w-8 h-8" />,
+    },
+    {
+      id: "skills",
+      label: "Settings",
+      icon: <Win11SettingsIcon className="w-8 h-8" />,
     },
     {
       id: "terminal",

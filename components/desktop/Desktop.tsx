@@ -29,6 +29,8 @@ import { CommandPalette } from "../search/CommandPalette";
 import { RecruiterModal } from "../recruiter/RecruiterModal";
 import { BootScreen } from "../boot/BootScreen";
 import { LockScreen } from "../boot/LockScreen";
+import { LoginScreen } from "../boot/LoginScreen";
+import { WindowsNotification } from "./WindowsNotification";
 import { MobileView } from "../mobile/MobileView";
 import {
   Win11ThisPCIcon,
@@ -38,6 +40,7 @@ import {
   Win11SettingsIcon,
   Win11TerminalIcon,
   Win11ResumeIcon,
+  Win11ContactIcon,
 } from "@/components/icons/Win11FluentIcons";
 import {
   DesktopRegular,
@@ -56,8 +59,9 @@ import {
 } from "@/components/icons/FluentIcons";
 
 export function Desktop() {
-  // Boot & Lock screen states
+  // Boot & Lock & Login screen states
   const [hasBooted, setHasBooted] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLocked, setIsLocked] = useState(false);
 
   // Global z-index counter
@@ -191,7 +195,7 @@ export function Desktop() {
     },
     contact: {
       id: "contact",
-      title: "Contact",
+      title: "Contact & Inquiries",
       icon: "Contact",
       isOpen: false,
       isMinimized: false,
@@ -209,12 +213,16 @@ export function Desktop() {
     },
   });
 
-  // Check localStorage for boot
+  // Check localStorage for boot and sessionStorage for login
   useEffect(() => {
     try {
       const seen = localStorage.getItem("prasannaraj_os_booted");
       if (seen === "true") {
         setHasBooted(true);
+      }
+      const logged = sessionStorage.getItem("prasannaraj_os_logged_in");
+      if (logged === "true") {
+        setIsLoggedIn(true);
       }
     } catch (e) {
       setHasBooted(true);
@@ -228,11 +236,20 @@ export function Desktop() {
     } catch (e) {}
   };
 
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+    try {
+      sessionStorage.setItem("prasannaraj_os_logged_in", "true");
+    } catch (e) {}
+  };
+
   const handleRestartExperience = () => {
     try {
       localStorage.removeItem("prasannaraj_os_booted");
+      sessionStorage.removeItem("prasannaraj_os_logged_in");
     } catch (e) {}
     setHasBooted(false);
+    setIsLoggedIn(false);
     setIsLocked(false);
   };
 
@@ -359,7 +376,13 @@ export function Desktop() {
   };
 
   // Authentic Windows 11 Desktop Icons connected to Portfolio content
+  // Row 1: [This PC]              [Resume]
+  // Row 2: [Recycle Bin]          [LinkedIn]
+  // Row 3: [Projects]             [GitHub]
+  // Row 4: [AI Lab]               [Contact & Inquiries]
+  // Row 5: [Settings]             [Terminal]
   const desktopIcons = [
+    // Column 1
     {
       id: "this-pc",
       label: "This PC",
@@ -390,12 +413,7 @@ export function Desktop() {
       icon: "Settings",
       action: () => openApp("skills"),
     },
-    {
-      id: "terminal",
-      label: "Terminal",
-      icon: "Terminal",
-      action: () => openApp("terminal"),
-    },
+    // Column 2
     {
       id: "resume",
       label: "Resume",
@@ -406,13 +424,25 @@ export function Desktop() {
       id: "linkedin",
       label: "LinkedIn",
       icon: "LinkedIn",
-      action: () => window.open(profileData.links.linkedin, "_blank"),
+      href: profileData.links.linkedin,
     },
     {
       id: "github",
       label: "GitHub",
       icon: "GitHub",
-      action: () => window.open(profileData.links.github, "_blank"),
+      href: profileData.links.github,
+    },
+    {
+      id: "contact",
+      label: "Contact & Inquiries",
+      icon: "Contact",
+      action: () => openApp("contact"),
+    },
+    {
+      id: "terminal",
+      label: "Terminal",
+      icon: "Terminal",
+      action: () => openApp("terminal"),
     },
   ];
 
@@ -431,22 +461,30 @@ export function Desktop() {
       {/* 1. Cinematic Boot Screen (if not seen yet) */}
       {!hasBooted && <BootScreen onBootComplete={handleBootComplete} />}
 
-      {/* 2. Optional Lock Screen */}
+      {/* 2. Authentic Windows 11 Login / Sign-In Screen */}
+      {hasBooted && !isLoggedIn && (
+        <LoginScreen onLogin={handleLogin} onRestart={handleRestartExperience} />
+      )}
+
+      {/* 3. Optional Lock Screen */}
       {isLocked && <LockScreen onUnlock={() => setIsLocked(false)} />}
 
-      {/* 3. Mobile View (Automatic for small screens) */}
+      {/* 4. Mobile View (Automatic for small screens) */}
       <MobileView onOpenRecruiter={() => setIsRecruiterOpen(true)} />
 
-      {/* 4. Desktop View (For tablets & laptops/desktops) */}
+      {/* 5. Desktop View (For tablets & laptops/desktops) */}
       <div className="hidden md:flex flex-col w-full h-full relative">
         {/* Official Windows 11 Dark Bloom Wallpaper */}
         <Wallpaper />
 
+        {/* First Desktop Entrance Windows Notification Toast */}
+        {isLoggedIn && <WindowsNotification />}
+
         {/* Desktop Workspace Canvas */}
         <div className="relative flex-1 p-3 pb-16 flex flex-col justify-between overflow-hidden">
-          {/* Top-Left: Vertical Grid of Windows 11 Desktop Icons */}
+          {/* Top-Left: Vertical Grid of Windows 11 Desktop Icons (5 rows x 2 cols) */}
           <div
-            className="grid grid-flow-col grid-rows-6 gap-y-2 gap-x-2 w-max z-10"
+            className="grid grid-flow-col grid-rows-5 gap-y-2 gap-x-2 w-max z-10"
             onClick={(e) => e.stopPropagation()}
           >
             {desktopIcons.map((icon) => (
@@ -455,6 +493,7 @@ export function Desktop() {
                 id={icon.id}
                 label={icon.label}
                 iconName={icon.icon}
+                href={icon.href}
                 isSelected={selectedIconId === icon.id}
                 onClick={(e) => {
                   e.stopPropagation();
@@ -732,14 +771,14 @@ export function Desktop() {
         <WindowFrame
           id="contact"
           title={windows.contact.title}
-          icon={<MailRegular className="w-4 h-4 text-[#4ADE80]" />}
+          icon={<Win11ContactIcon className="w-4 h-4" />}
           isOpen={windows.contact.isOpen}
           isMinimized={windows.contact.isMinimized}
           isMaximized={windows.contact.isMaximized}
           zIndex={windows.contact.zIndex}
           isActive={activeWindowId === "contact"}
           initialWidth={760}
-          initialHeight={520}
+          initialHeight={540}
           onFocus={() => bringToFront("contact")}
           onClose={() => closeWindow("contact")}
           onMinimize={() => minimizeWindow("contact")}
@@ -789,8 +828,11 @@ export function Desktop() {
           onOpenSearch={() => setIsSearchOpen(true)}
           onRestartExperience={handleRestartExperience}
           onLockPortfolio={() => {
-            setIsLocked(true);
+            setIsLoggedIn(false);
             setIsStartMenuOpen(false);
+            try {
+              sessionStorage.removeItem("prasannaraj_os_logged_in");
+            } catch (e) {}
           }}
           onOpenRecruiterMode={() => setIsRecruiterOpen(true)}
         />

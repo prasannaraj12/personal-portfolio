@@ -14,6 +14,7 @@ import {
   Win11SettingsIcon,
   Win11TerminalIcon,
   Win11ResumeIcon,
+  Win11ContactIcon,
 } from "@/components/icons/Win11FluentIcons";
 import { SystemTray } from "./SystemTray";
 import { QuickSettingsPanel } from "./QuickSettingsPanel";
@@ -57,14 +58,19 @@ export function Taskbar({
       icon: <Win11AILabIcon className="w-6 h-6" />,
     },
     {
-      id: "terminal",
-      label: "Terminal",
-      icon: <Win11TerminalIcon className="w-6 h-6" />,
-    },
-    {
       id: "resume",
       label: "Resume / Document",
       icon: <Win11ResumeIcon className="w-6 h-6" />,
+    },
+    {
+      id: "contact",
+      label: "Contact & Inquiries",
+      icon: <Win11ContactIcon className="w-6 h-6" />,
+    },
+    {
+      id: "terminal",
+      label: "Terminal",
+      icon: <Win11TerminalIcon className="w-6 h-6" />,
     },
     {
       id: "about",
