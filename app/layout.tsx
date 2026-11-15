@@ -21,39 +21,41 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Prasannaraj — AI / ML Engineer",
+  title: "Prasanna Raj R — AI / ML Engineer",
   description:
-    "Portfolio of Prasannaraj, an AI/ML engineer focused on Generative AI, Agentic AI, Computer Vision, NLP, and intelligent systems.",
+    "Portfolio of Prasanna Raj R, an AI/ML engineer specializing in Generative AI, LLM applications, Agentic AI systems, and fine-tuned open-weight language models.",
   keywords: [
+    "Prasanna Raj R",
     "Prasannaraj",
     "AI Engineer",
     "Machine Learning Engineer",
     "Generative AI",
     "Agentic AI",
-    "Computer Vision",
-    "NLP",
-    "TRUST-CV",
-    "SatQuery AI",
+    "LLM Fine-Tuning",
+    "LangGraph",
+    "LangChain",
+    "FastAPI",
+    "AgentDB",
     "CrawlNews",
     "Sri Sairam College of Engineering",
-    "Bangalore",
+    "Bengaluru",
   ],
-  authors: [{ name: "Prasannaraj" }],
-  creator: "Prasannaraj",
+  authors: [{ name: "Prasanna Raj R" }],
+  creator: "Prasanna Raj R",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://prasannaraj.dev",
-    title: "Prasannaraj — AI / ML Engineer",
+    title: "Prasanna Raj R — AI / ML Engineer",
     description:
-      "Interactive Windows 11 Desktop Portfolio of Prasannaraj, an AI/ML Engineer focused on Generative AI, Agentic AI, Computer Vision, and full-stack intelligent systems.",
-    siteName: "Prasannaraj Portfolio",
+      "Interactive Windows 11 Desktop Portfolio of Prasanna Raj R, an AI/ML Engineer specializing in Generative AI, LLM applications, Agentic AI systems, and fine-tuned open-weight models.",
+    siteName: "Prasanna Raj R Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prasannaraj — AI / ML Engineer",
+    title: "Prasanna Raj R — AI / ML Engineer",
     description:
-      "Interactive Windows 11 Desktop Portfolio of Prasannaraj, an AI/ML Engineer focused on Generative AI, Agentic AI, Computer Vision, and full-stack intelligent systems.",
+      "Interactive Windows 11 Desktop Portfolio of Prasanna Raj R, an AI/ML Engineer specializing in Generative AI, LLM applications, Agentic AI systems, and fine-tuned open-weight models.",
   },
   robots: {
     index: true,
@@ -69,23 +71,24 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Prasannaraj",
+    name: "Prasanna Raj R",
     jobTitle: "AI / ML Engineer",
     worksFor: {
       "@type": "Organization",
-      name: "Crawl Corp India (CCI)",
+      name: "Crawl Corp India Private Limited",
     },
     alumniOf: {
       "@type": "CollegeOrUniversity",
-      name: "Sri Sairam College of Engineering, Bangalore",
+      name: "Sri Sairam College of Engineering, Bengaluru",
     },
     knowsAbout: [
       "Artificial Intelligence",
       "Machine Learning",
       "Generative AI",
       "Agentic AI",
-      "Computer Vision",
-      "Natural Language Processing",
+      "LLM Fine-Tuning (QLoRA / PEFT)",
+      "LangChain & LangGraph",
+      "FastAPI & Node.js Backend",
       "Full-Stack AI Applications",
     ],
   };

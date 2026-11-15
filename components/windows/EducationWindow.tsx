@@ -48,9 +48,14 @@ export function EducationWindow() {
               </div>
             </div>
 
-            <span className="text-[11px] font-mono text-[#4CC2FF] bg-[#0078D4]/20 px-2.5 py-1 rounded-[3px] border border-[#0078D4]/30 self-start">
-              {edu.period || "Undergraduate Engineering"}
-            </span>
+            <div className="flex flex-wrap items-center gap-2 self-start">
+              <span className="text-[11px] font-mono text-[#10B981] bg-[#10B981]/15 px-2.5 py-1 rounded-[3px] border border-[#10B981]/30 font-semibold">
+                CGPA: 7.975 / 10
+              </span>
+              <span className="text-[11px] font-mono text-[#4CC2FF] bg-[#0078D4]/20 px-2.5 py-1 rounded-[3px] border border-[#0078D4]/30">
+                {edu.period || "2023 – 2027 (Expected)"}
+              </span>
+            </div>
           </div>
 
           <p className="text-xs text-[#D4D4D8] leading-relaxed border-t border-[#282828] pt-3">

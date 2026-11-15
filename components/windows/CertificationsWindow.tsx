@@ -5,7 +5,6 @@ import { certificationsData } from "@/data/certifications";
 import { CertificationItem } from "@/types";
 import {
   CertificateRegular,
-  CheckmarkCircleRegular,
   BuildingRegular,
   DismissRegular,
 } from "@/components/icons/FluentIcons";
@@ -22,7 +21,7 @@ export function CertificationsWindow() {
             Professional Credentials & Certifications
           </h1>
           <p className="text-xs text-[#A8AFBA] mt-1">
-            Verified technical certifications from NPTEL, HP, Cisco, and global institutions.
+            Verified technical certifications from Tata Group/Forage, Databricks, IBM, and global institutions.
           </p>
         </div>
 

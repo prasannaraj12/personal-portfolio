@@ -2,6 +2,239 @@ import { ProjectItem } from "@/types";
 
 export const projectsData: ProjectItem[] = [
   {
+    id: "agentdb",
+    title: "AGENTDB",
+    subtitle: "Agentic AI Database Assistant",
+    category: "Generative AI / Agents",
+    badge: "LangGraph ReAct Agent",
+    iconName: "Sparkle",
+    overview:
+      "Architected a LangGraph ReAct pipeline with 5 custom LangChain tools (schema reader, SQL executor, chart generator, diagram renderer, insight generator) for autonomous reasoning over any SQLite database, cutting response time from hours to under 2 seconds; validated across 50+ queries. Shipped via FastAPI, React/Vite, and Docker.",
+    problem:
+      "Querying and visualizing complex relational database schemas traditionally requires manual SQL formulation, schema hunting, and reporting latency, leading to slow operational turnaround and human query errors.",
+    solution:
+      "Engineered an autonomous ReAct agentic workflow with LangGraph and LangChain that dynamically inspects schemas, synthesizes and validates SQL queries, executes them safely against SQLite, generates visual charts and entity diagrams, and synthesizes executive insights in real time.",
+    architecture: {
+      title: "LangGraph ReAct Autonomous Database Engine",
+      flow: [
+        "Natural Language User Prompt Ingestion",
+        "LangGraph StateGraph & ReAct Planner",
+        "Schema Reader Tool (Catalog & Foreign Key Discovery)",
+        "SQL Executor Tool (Sandboxed Query Formulation & Run)",
+        "Chart Generator Tool (Structured Aggregations)",
+        "Diagram Renderer Tool (Entity Relationship Mapping)",
+        "Insight Generator Tool (Synthesized Answers)",
+        "FastAPI Gateway & React/Vite Streaming UI",
+      ],
+      description:
+        "LangGraph coordinates a cyclical ReAct reasoning loop across 5 specialized LangChain tools. Queries are validated, executed against SQLite databases, converted to live data visualizations and diagrams, and streamed to the user via FastAPI and Docker.",
+    },
+    technologies: [
+      "LangGraph",
+      "LangChain",
+      "Python",
+      "FastAPI",
+      "SQLite",
+      "React",
+      "Vite",
+      "Docker",
+      "ReAct Agents",
+      "Prompt Engineering",
+    ],
+    implementation: [
+      "Built 5 custom LangChain tools: schema reader, SQL executor, chart generator, diagram renderer, and insight generator.",
+      "Designed stateful LangGraph cyclical graphs with error recovery and automated SQL correction loops.",
+      "Packaged backend services into high-performance asynchronous FastAPI endpoints containerized with Docker.",
+      "Engineered React/Vite frontend for real-time prompt-to-visualization feedback.",
+    ],
+    results: [
+      "Cut database interrogation response time from hours to under 2 seconds.",
+      "Empirically validated and stress-tested across 50+ diverse test queries with zero execution failures.",
+      "Production containerized deployment with reproducible Docker build.",
+    ],
+    githubUrl: "https://github.com/prasannaraj12",
+    caseStudy:
+      "AgentDB demonstrates how LangGraph ReAct orchestration enables autonomous agents to securely reason over relational data, validate execution schemas, and provide instant visual insights.",
+    stats: [
+      { label: "Reasoning Loop", value: "LangGraph ReAct" },
+      { label: "Custom Tools", value: "5 LangChain Tools" },
+      { label: "Query Latency", value: "< 2 Seconds" },
+      { label: "Validation", value: "50+ Test Queries" },
+    ],
+  },
+  {
+    id: "llm-finetuning-qwen",
+    title: "LLM FINE-TUNING — QWEN",
+    subtitle: "QLoRA / PEFT Supervised Fine-Tuning",
+    category: "Generative AI / Agents",
+    badge: "Fine-Tuned LLM",
+    iconName: "BrainCircuit",
+    overview:
+      "Fine-tuned an open-weight Qwen model end-to-end using Supervised Fine-Tuning with LoRA/QLoRA and PEFT (Unsloth, TRL, Hugging Face Transformers); applied bitsandbytes 4-bit quantization and validated outputs before deploying for optimized inference.",
+    problem:
+      "General-purpose foundation models exhibit generic outputs, high memory footprints, and suboptimal task performance on specialized domain tasks when deployed on constrained edge or budget cloud hardware.",
+    solution:
+      "Constructed an end-to-end Supervised Fine-Tuning (SFT) pipeline utilizing Parameter-Efficient Fine-Tuning (PEFT) and LoRA/QLoRA with Unsloth and Hugging Face Transformers. Utilized bitsandbytes 4-bit NormalFloat quantization to drastically reduce VRAM requirements while preserving target task quality.",
+    architecture: {
+      title: "QLoRA / PEFT Supervised Fine-Tuning Pipeline",
+      flow: [
+        "Open-Weight Qwen Base Model Ingestion",
+        "Domain Dataset Formatting & ChatML Tokenization",
+        "bitsandbytes 4-bit NF4 Quantization Matrix",
+        "Low-Rank Adaptation (LoRA) Target Projections",
+        "TRL SFTTrainer Optimization Loop & Checkpointing",
+        "Weight Merging & Parameter Verification",
+        "Optimized Low-Latency Inference Deployment",
+      ],
+      description:
+        "Processes raw training sets into structured ChatML tokens, freezes base 4-bit quantized Qwen weights, injects trainable LoRA rank-decomposition matrices, optimizes via Unsloth and TRL SFTTrainer, and exports merged model artifacts for fast inference.",
+    },
+    technologies: [
+      "Qwen",
+      "Supervised Fine-Tuning (SFT)",
+      "PEFT",
+      "LoRA / QLoRA",
+      "Unsloth",
+      "Hugging Face Transformers",
+      "TRL",
+      "bitsandbytes",
+      "PyTorch",
+      "Python",
+    ],
+    implementation: [
+      "Fine-tuned open-weight Qwen end-to-end using Unsloth, Hugging Face Transformers, and TRL.",
+      "Tuned LoRA hyperparameters (rank r=16/32, alpha scaling, target attention projections).",
+      "Applied bitsandbytes 4-bit quantization (NF4) for 60%+ VRAM memory reduction.",
+      "Validated outputs against strict domain evaluation benchmarks before inference deployment.",
+    ],
+    results: [
+      "Over 60% GPU memory reduction via bitsandbytes 4-bit QLoRA training.",
+      "High domain instruction adherence verified across dedicated prompt evaluation suites.",
+      "Seamless export of deployment-ready model weights for low-latency inference.",
+    ],
+    githubUrl: "https://github.com/prasannaraj12",
+    caseStudy:
+      "Demonstrates practical end-to-end LLM fine-tuning mechanics, applying modern parameter-efficient techniques to open-weight foundation models.",
+    stats: [
+      { label: "Fine-Tuning Method", value: "QLoRA / PEFT" },
+      { label: "Base Model", value: "Qwen Open-Weight" },
+      { label: "Quantization", value: "bitsandbytes 4-bit" },
+      { label: "Frameworks", value: "Unsloth + TRL" },
+    ],
+  },
+  {
+    id: "crawlnews",
+    title: "CRAWLNEWS",
+    subtitle: "Multi-Agent News Intelligence Platform",
+    category: "Generative AI / Agents",
+    badge: "Multi-Agent System",
+    iconName: "Newspaper",
+    overview:
+      "Built an AI-agent pipeline for automated news collection, deduplication, event clustering, relevance filtering, fact verification, and LLM-based summarization across 31 RSS sources on a 15-minute scheduled cycle (Crawl Corp).",
+    problem:
+      "Information overload, sensationalism, and repetitive syndicated news feeds overwhelm analysts, making real-time verification and unbiased summarization labor-intensive.",
+    solution:
+      "Architected a distributed multi-agent pipeline where specialized autonomous workers collaborate to harvest RSS feeds, detect duplicates via semantic embeddings, verify facts, summarize core takeaways, and stream updates via an Express API gateway.",
+    architecture: {
+      title: "Distributed Multi-Agent Ingestion & Synthesis Pipeline",
+      flow: [
+        "React Web App",
+        "Express API Gateway",
+        "Orchestrator Agent",
+        "News Collection Agent (RSS / Playwright)",
+        "Duplicate Detection Agent (Semantic Cosine)",
+        "AI Relevance Filter",
+        "Fact Verification Agent",
+        "Categorization & Summarization Agent",
+        "Admin Dashboard & SQLite Storage",
+      ],
+      description:
+        "The Orchestrator Agent schedules node-cron scraping cycles. Raw articles flow through Playwright scrapers, duplicate deduplication filters, fact verification checks, and automated summarization before storing clean structured feeds in SQLite.",
+    },
+    technologies: [
+      "AI Agents",
+      "Node.js",
+      "Express",
+      "TypeScript",
+      "SQLite",
+      "RSS",
+      "Playwright",
+      "node-cron",
+      "React",
+    ],
+    implementation: [
+      "Engineered Orchestrator Agent to manage asynchronous task queues and error recovery.",
+      "Implemented Playwright and RSS crawlers with anti-bot resilience.",
+      "Constructed semantic clustering to eliminate duplicate stories across 31 RSS sources.",
+      "Built interactive React administration console with real-time ingest metrics.",
+    ],
+    results: [
+      "Automated news intelligence cycle operating autonomously on 15-minute scheduled intervals.",
+      "Over 90% redundant article reduction achieved through semantic duplicate detection.",
+      "End-to-end processing pipeline completes in under 12 seconds per newly published story batch.",
+    ],
+    githubUrl: "https://github.com/prasannaraj12",
+    stats: [
+      { label: "Architecture", value: "6 Autonomous Agents" },
+      { label: "Schedule", value: "15-Minute Cycle" },
+      { label: "Sources", value: "31 RSS Feeds" },
+    ],
+  },
+  {
+    id: "rentyourmate",
+    title: "RENTYOURMATE",
+    subtitle: "Verified-Companion Marketplace Platform",
+    category: "Full-Stack AI",
+    badge: "Verified Marketplace",
+    iconName: "Users",
+    overview:
+      "Built a full-stack marketplace (Flutter, Node.js/Express, PostgreSQL, Firebase) with secure booking/payment workflows, KYC/selfie verification, and role-based access (Crawl Corp).",
+    problem:
+      "People seeking platonic event companions, travel buddies, or professional networking accompaniment lack safe, verified platforms with strict identity governance, background checks, and structured escrow payments.",
+    solution:
+      "Engineered an enterprise-grade mobile and cloud architecture featuring KYC identity verification, geolocation search via OpenStreetMap & Photon, structured time-slot booking schedules, and Razorpay escrow payments.",
+    architecture: {
+      title: "Secure Verification & Booking Architecture",
+      flow: [
+        "Flutter Cross-Platform Client",
+        "Firebase Auth & Strict KYC/Selfie Verification",
+        "Node.js & Express API Backend",
+        "PostgreSQL Relational DB (Bookings & Escrow)",
+        "OpenStreetMap & Photon Geocoding",
+        "Razorpay Payment Gateway Integration",
+      ],
+      description:
+        "User sessions authenticate via Firebase Auth; KYC verification validates national identity documents and selfies before profiles can publish availability. Bookings are transacted through PostgreSQL with strict Razorpay escrow and geocoded via OpenStreetMap.",
+    },
+    technologies: [
+      "Flutter",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Firebase",
+      "KYC / Selfie Verification",
+      "Razorpay",
+      "OpenStreetMap",
+    ],
+    implementation: [
+      "Architected Flutter mobile app utilizing clean Provider state separation.",
+      "Constructed strict KYC and selfie verification workflows with role-based access control.",
+      "Integrated OpenStreetMap and Photon API for privacy-preserving localized geocoding.",
+      "Implemented transactional PostgreSQL booking state machines with Razorpay webhooks.",
+    ],
+    results: [
+      "Strict trust and safety protocols prioritizing verified, safe, and transparent bookings.",
+      "Role-based access control with zero tolerance for unverified profiles.",
+      "High performance responsive mobile interface with real-time booking updates.",
+    ],
+    githubUrl: "https://github.com/prasannaraj12",
+    stats: [
+      { label: "Platform", value: "Flutter + Node.js" },
+      { label: "Database", value: "PostgreSQL + Firebase" },
+      { label: "Verification", value: "KYC / Selfie Verified" },
+    ],
+  },
+  {
     id: "trust-cv",
     title: "TRUST-CV / BLOCK SENTINAL",
     subtitle: "Computer Vision Integrity Assurance Platform",
@@ -109,64 +342,6 @@ export const projectsData: ProjectItem[] = [
       { label: "Backbone", value: "ResNet-18 + MultiStem" },
       { label: "Dataset Adaptation", value: "BigEarthNet" },
       { label: "Tasks", value: "VQA + Captioning" },
-    ],
-  },
-  {
-    id: "crawlnews",
-    title: "CRAWLNEWS",
-    subtitle: "Multi-Agent News Intelligence Platform",
-    category: "Generative AI / Agents",
-    badge: "Multi-Agent System",
-    iconName: "Newspaper",
-    overview:
-      "Multi-agent AI news intelligence platform for collection, verification, categorization and summarization.",
-    problem:
-      "Information overload, sensationalism, and repetitive syndicated news feeds overwhelm analysts, making real-time verification and unbiased summarization labor-intensive.",
-    solution:
-      "Architected a distributed multi-agent pipeline where specialized autonomous workers collaborate to harvest RSS feeds, detect duplicates via semantic embeddings, verify facts, summarize core takeaways, and stream updates via an Express API gateway.",
-    architecture: {
-      title: "Distributed Multi-Agent Ingestion & Synthesis Pipeline",
-      flow: [
-        "React Web App",
-        "Express API Gateway",
-        "Orchestrator Agent",
-        "News Collection Agent (RSS / Playwright)",
-        "Duplicate Detection Agent (Semantic Cosine)",
-        "AI Relevance Filter",
-        "Fact Verification Agent",
-        "Categorization & Summarization Agent",
-        "Admin Dashboard & SQLite Storage",
-      ],
-      description:
-        "The Orchestrator Agent schedules node-cron scraping cycles. Raw articles flow through Playwright scrapers, duplicate deduplication filters, fact verification checks, and automated summarization before storing clean structured feeds in SQLite.",
-    },
-    technologies: [
-      "Node.js",
-      "Express",
-      "TypeScript",
-      "SQLite",
-      "RSS",
-      "Playwright",
-      "node-cron",
-      "AI Agents",
-      "React",
-    ],
-    implementation: [
-      "Engineered Orchestrator Agent to manage asynchronous task queues and error recovery.",
-      "Implemented Playwright and RSS crawlers with anti-bot resilience.",
-      "Constructed semantic clustering to eliminate duplicate stories across 50+ wire sources.",
-      "Built interactive React administration console with real-time ingest metrics.",
-    ],
-    results: [
-      "Over 90% redundant article reduction achieved through semantic duplicate detection.",
-      "End-to-end processing pipeline completes in under 12 seconds per newly published story batch.",
-      "Self-healing worker processes with automated node-cron error retries.",
-    ],
-    githubUrl: "https://github.com",
-    stats: [
-      { label: "Architecture", value: "6 Autonomous Agents" },
-      { label: "Redundancy Filter", value: "Semantic Dedup" },
-      { label: "Runtime", value: "Node.js + TypeScript" },
     ],
   },
   {
@@ -330,61 +505,6 @@ export const projectsData: ProjectItem[] = [
       { label: "Detector", value: "YOLOv5" },
       { label: "Tracker", value: "DeepSORT" },
       { label: "Framework", value: "PyTorch / OpenCV" },
-    ],
-  },
-  {
-    id: "rentyourmate",
-    title: "RENTYOURMATE",
-    subtitle: "Trusted Companion Marketplace",
-    category: "Full-Stack AI",
-    badge: "Verified Marketplace",
-    iconName: "Users",
-    overview:
-      "Trusted companion marketplace with identity verification, KYC and secure booking workflows.",
-    problem:
-      "People seeking platonic event companions, travel buddies, or professional networking accompaniment lack safe, verified platforms with strict identity governance, background checks, and structured escrow payments.",
-    solution:
-      "Engineered an enterprise-grade mobile and cloud architecture featuring KYC identity verification, geolocation search via OpenStreetMap & Photon, structured time-slot booking schedules, and Razorpay escrow payments.",
-    architecture: {
-      title: "Secure Verification & Booking Architecture",
-      flow: [
-        "Flutter Cross-Platform Client",
-        "Firebase Auth & Strict KYC Verification",
-        "Node.js & Express API Backend",
-        "PostgreSQL Relational DB (Bookings & Escrow)",
-        "OpenStreetMap & Photon Geocoding",
-        "Razorpay Payment Gateway Integration",
-      ],
-      description:
-        "User sessions authenticate via Firebase Auth; KYC verification validates national identity documents before profiles can publish availability. Bookings are transacted through PostgreSQL with strict Razorpay escrow and geocoded via OpenStreetMap.",
-    },
-    technologies: [
-      "Flutter",
-      "Provider State Management",
-      "Firebase Auth",
-      "Node.js",
-      "Express",
-      "PostgreSQL",
-      "Razorpay",
-      "OpenStreetMap",
-      "Photon",
-    ],
-    implementation: [
-      "Architected Flutter mobile app utilizing clean Provider state separation.",
-      "Constructed strict KYC credential upload and manual review workflow.",
-      "Integrated OpenStreetMap and Photon API for privacy-preserving localized geocoding.",
-      "Implemented transactional PostgreSQL booking state machines with Razorpay webhooks.",
-    ],
-    results: [
-      "Strict trust and safety protocols prioritizing verified, safe, and transparent bookings.",
-      "Zero tolerance for unverified profiles, enforcing platform compliance.",
-      "High performance responsive mobile interface with real-time booking updates.",
-    ],
-    githubUrl: "https://github.com",
-    stats: [
-      { label: "Platform", value: "Flutter + Node.js" },
-      { label: "Database", value: "PostgreSQL" },
-      { label: "Compliance", value: "Strict KYC Verified" },
     ],
   },
   {

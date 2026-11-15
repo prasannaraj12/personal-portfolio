@@ -1,10 +1,7 @@
 import { profileData } from "./profile";
 import { projectsData } from "./projects";
-import { skillsData } from "./skills";
 import { experienceData } from "./experience";
 import { educationData } from "./education";
-import { certificationsData } from "./certifications";
-import { achievementsData } from "./achievements";
 
 export interface KnowledgeItem {
   id: string;
@@ -35,25 +32,48 @@ export const portfolioKnowledgeBase: KnowledgeItem[] = [
   {
     id: "education-degree",
     category: "education",
-    title: "Education Credentials",
-    keywords: ["education", "college", "degree", "university", "sairam", "study", "engineering", "undergraduate", "major"],
-    content: `Prasannaraj is pursuing his ${educationData[0].degree} at ${educationData[0].institution}, ${educationData[0].location}. Academic focus: ${educationData[0].academicFocus.join(", ")}.`,
+    title: "Education Credentials & CGPA",
+    keywords: ["education", "college", "degree", "university", "sairam", "study", "engineering", "undergraduate", "major", "cgpa", "marks", "vtu", "graduation"],
+    content: `Prasanna Raj R is pursuing his ${educationData[0].degree} at ${educationData[0].institution}, ${educationData[0].location} (Affiliated with VTU, Expected 2027). Current CGPA: 7.975 / 10. Academic focus includes: ${educationData[0].academicFocus.join(", ")}.`,
     sourceLabel: "EDUCATION",
   },
   {
     id: "experience-cci",
     category: "experience",
-    title: "Professional Work Experience",
-    keywords: ["experience", "job", "work", "crawl corp", "cci", "junior ai engineer", "intern", "company", "career"],
-    content: `Prasannaraj works as a ${experienceData[0].role} at ${experienceData[0].company}. ${experienceData[0].description} Key technical achievements include: ${experienceData[0].highlights.join("; ")}. Stack used: ${experienceData[0].technologies.join(", ")}.`,
+    title: "Junior AI Engineer Intern — Crawl Corp India",
+    keywords: ["experience", "job", "work", "crawl corp", "cci", "junior ai engineer", "intern", "company", "career", "crawlnews", "rentyourmate"],
+    content: `Prasanna Raj R serves as ${experienceData[0].role} at ${experienceData[0].company} (${experienceData[0].period}). ${experienceData[0].description} Highlights: ${experienceData[0].highlights.join("; ")}. Tech stack: ${experienceData[0].technologies.join(", ")}.`,
+    sourceLabel: "EXPERIENCE",
+  },
+  {
+    id: "experience-novitech",
+    category: "experience",
+    title: "Data Analyst Intern — NoviTech R&D",
+    keywords: ["novitech", "data analyst", "intern", "pandas", "matplotlib", "cleaning", "analytics", "internship"],
+    content: `Prasanna Raj R worked as Data Analyst Intern at NoviTech R&D Private Limited (Sep–Oct 2024). Built automated data-cleaning and visualization pipelines (Python, Pandas, Matplotlib), cutting preprocessing turnaround time 40% for recurring reporting cycles.`,
+    sourceLabel: "EXPERIENCE",
+  },
+  {
+    id: "experience-1m1b",
+    category: "experience",
+    title: "Green Intern — 1M1B (1 Million for 1 Billion)",
+    keywords: ["1m1b", "green intern", "sustainability", "research", "data", "beneficiaries"],
+    content: `Prasanna Raj R worked as Green Intern at 1M1B (1 Million for 1 Billion) (Sep–Oct 2025). Contributed data-driven research and analytical modeling to sustainability-focused technology initiatives serving 1M+ beneficiaries across communities.`,
     sourceLabel: "EXPERIENCE",
   },
   {
     id: "skills-overview",
     category: "skills",
     title: "Technical Skills & Stack",
-    keywords: ["skills", "technologies", "tech stack", "languages", "python", "typescript", "frameworks", "tools", "databases", "pytorch"],
-    content: `Prasannaraj's technical toolkit includes: Programming (Python, JavaScript, TypeScript, SQL); AI/ML (Machine Learning, Deep Learning, Computer Vision, NLP); Generative AI & Agents (LLMs, RAG, Prompt Engineering, Autonomous AI Agents, Multi-Agent Systems); Frameworks (PyTorch, TensorFlow, Scikit-learn, OpenCV, XGBoost, FastAPI, Flask, React, Flutter, Node.js); Tools (Docker, Git, Power BI, Tableau, n8n); Databases (PostgreSQL, SQLite, Firebase).`,
+    keywords: ["skills", "technologies", "tech stack", "languages", "python", "typescript", "frameworks", "tools", "databases", "fine-tuning", "lora", "qlora", "langgraph", "langchain"],
+    content: `Prasanna Raj R's technical toolkit comprises:
+• Programming: Python, SQL, TypeScript, JavaScript
+• Generative AI & LLM: LLMs, RAG, Agentic AI, Multi-Agent Systems, LangChain, LangGraph, Prompt Engineering, Tool/Function Calling, LLM APIs, Embeddings, Vector Databases (ChromaDB)
+• LLM Fine-Tuning: Supervised Fine-Tuning (SFT), PEFT, LoRA, QLoRA, Hugging Face Transformers, TRL, Unsloth, bitsandbytes (4-bit quantization)
+• AI/ML: Machine Learning, Deep Learning, NLP, Transformers, XGBoost
+• Backend: FastAPI, REST APIs, Async Programming, Node.js, Express, Docker, SQLite, PostgreSQL, Convex
+• Frontend: React, TypeScript, Flutter, Vite, Tailwind CSS
+• Tools & Analytics: Git, GitHub, n8n, Pandas, Matplotlib, Power BI, Tableau`,
     sourceLabel: "SKILLS",
   },
   // All projects
@@ -77,45 +97,47 @@ export const portfolioKnowledgeBase: KnowledgeItem[] = [
     id: "projects-list-overview",
     category: "projects",
     title: "Projects Overview",
-    keywords: ["projects", "what projects", "show projects", "portfolio projects", "what has he built", "work portfolio"],
-    content: `8 verified engineering projects:
-1. TRUST-CV / BLOCK SENTINAL: Air-gapped Computer Vision Integrity Assurance Platform (210/210 tests passing).
-2. SATQUERY AI: Multispectral satellite image analysis with visual question answering and image captioning.
-3. CRAWLNEWS: Multi-agent AI news intelligence platform for collection, verification, and summarization.
-4. FAKEO: Multimodal fake news detection using XGBoost, TF-IDF, OCR and NLP.
-5. URBANBLOOM AI: Smart irrigation IoT system using ESP32, soil-moisture sensing and Gemini integration.
-6. PLAYER RE-IDENTIFICATION: Computer vision tracking and re-identification with YOLOv5 and DeepSORT.
-7. RENTYOURMATE: Trusted companion marketplace with identity verification and KYC workflows.
-8. CHEST X-RAY AI: Radiographic disease localization with U-Net, DenseNet121, and Grad-CAM.`,
+    keywords: ["projects", "what projects", "show projects", "portfolio projects", "what has he built", "work portfolio", "agentdb", "qwen", "crawlnews", "rentyourmate"],
+    content: `10 verified engineering projects (featuring flagship resume projects):
+1. AGENTDB: Agentic AI Database Assistant with LangGraph ReAct and 5 custom LangChain tools (< 2s latency).
+2. LLM FINE-TUNING — QWEN: Supervised Fine-Tuning (SFT) with LoRA/QLoRA and PEFT (Unsloth, TRL, bitsandbytes 4-bit).
+3. CRAWLNEWS: Multi-agent AI news intelligence platform across 31 RSS sources on 15-minute scheduled cycle (Crawl Corp).
+4. RENTYOURMATE: Verified-companion marketplace platform with Flutter, Node.js, PostgreSQL, and KYC/selfie verification.
+5. TRUST-CV / BLOCK SENTINAL: Air-gapped Computer Vision Integrity Assurance Platform (210/210 tests passing).
+6. SATQUERY AI: Multispectral satellite image analysis with visual question answering and image captioning.
+7. FAKEO: Multimodal fake news detection using XGBoost, TF-IDF, OCR and NLP (Standout Winner).
+8. URBANBLOOM AI: Smart irrigation IoT system using ESP32, soil-moisture sensing and Gemini integration.
+9. PLAYER RE-IDENTIFICATION: Computer vision tracking and re-identification with YOLOv5 and DeepSORT.
+10. CHEST X-RAY AI: Radiographic disease localization with U-Net, DenseNet121, and Grad-CAM.`,
     sourceLabel: "PROJECTS",
   },
   {
     id: "certifications-list",
     category: "certifications",
     title: "Professional Certifications",
-    keywords: ["certifications", "certificates", "credentials", "ibm", "infosys", "nptel", "great learning", "course"],
+    keywords: ["certifications", "certificates", "credentials", "tata", "forage", "databricks", "ibm", "infosys", "nptel", "course"],
     content: `Verified professional certifications:
-1. Principle of Generative AI (Infosys Springboard)
-2. Data Analysis with Python (IBM CognitiveClass.ai)
-3. Machine Learning with Python (IBM CognitiveClass.ai)
-4. Prompt Engineering for Everyone (IBM CognitiveClass.ai)
-5. Data Science Foundations (Great Learning)
-6. Data to Dashboard: Mastering Visual Storytelling with Tableau (NPTEL)
-7. Generative AI using WatsonX (IBM SkillsBuild)`,
+1. Data Visualization: Empowering Business with Effective Insights — Tata Group / Forage (2025)
+2. Databricks Fundamentals — Databricks (2025)
+3. AI Fundamentals — IBM (2025)
+4. Principle of Generative AI — Infosys Springboard
+5. Prompt Engineering for Everyone — IBM CognitiveClass.ai
+6. Machine Learning with Python — IBM CognitiveClass.ai
+7. Generative AI using WatsonX — IBM SkillsBuild`,
     sourceLabel: "CERTIFICATIONS",
   },
   {
     id: "achievements-list",
     category: "achievements",
     title: "Achievements & Hackathons",
-    keywords: ["achievements", "hackathons", "awards", "smart india hackathon", "sih", "srit", "advaya", "sastra", "vihansa", "finalist"],
+    keywords: ["achievements", "hackathons", "awards", "smart india hackathon", "sih", "srit", "advaya", "sastra", "vihansa", "finalist", "itech"],
     content: `Verified achievements & hackathon milestones:
-1. Smart India Hackathon (SIH): Selected for national competition.
-2. SRIT Hackathon: Led Team Revolutionary to build FAKEO fake news detection (Standout Winner).
-3. ADVAYA 2K25: Showcased UrbanBloom AI smart irrigation IoT system.
-4. SASTRA AI Hackathon: Finalist in intensive engineering sprint.
-5. Vihansa 24-Hour Hackathon: Successfully engineered and pitched prototype in 24 hours.
-6. 2X Hackathon Finalist across prestigious technology competitions.`,
+1. 3x National Hackathon Finalist: Smart India Hackathon 2024, ADVAYA 2K25, Vihansa 2025.
+2. iTech AI Innovation Hackathon 2026: Hackathon Finalist for Generative AI prototype.
+3. Smart India Hackathon (SIH 2024): Selected as National Finalist.
+4. SRIT Hackathon: Led Team Revolutionary to build FAKEO fake news detection (Standout Winner).
+5. ADVAYA 2K25: National Finalist showcasing UrbanBloom AI smart irrigation IoT system.
+6. Vihansa 2025: National Finalist in intensive uninterrupted 24-hour engineering sprint.`,
     sourceLabel: "ACHIEVEMENTS",
   },
   {

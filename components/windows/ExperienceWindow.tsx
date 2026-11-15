@@ -3,7 +3,6 @@
 import React from "react";
 import { experienceData } from "@/data/experience";
 import {
-  BriefcaseRegular,
   LocationRegular,
   CalendarRegular,
   CheckmarkCircleRegular,
@@ -48,7 +47,11 @@ export function ExperienceWindow() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 text-xs text-[#A8AFBA] font-mono">
+                <div className="flex flex-wrap items-center gap-3 text-xs text-[#A8AFBA] font-mono">
+                  <span className="flex items-center gap-1 text-[#4CC2FF]">
+                    <CalendarRegular className="w-3.5 h-3.5" />
+                    {exp.period}
+                  </span>
                   <span className="flex items-center gap-1">
                     <LocationRegular className="w-3.5 h-3.5 text-[#10B981]" />
                     {exp.location}

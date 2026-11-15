@@ -2,21 +2,21 @@ import { EducationItem } from "@/types";
 
 export const educationData: EducationItem[] = [
   {
-    institution: "Sri Sairam College of Engineering",
-    degree: "Bachelor of Engineering (BE) — Artificial Intelligence & Machine Learning",
-    location: "Bangalore, India",
-    period: "Undergraduate Engineering",
+    institution: "Sri Sairam College of Engineering, Bengaluru",
+    degree: "B.E. in Artificial Intelligence & Machine Learning",
+    location: "Bengaluru, Karnataka, India",
+    period: "2023 – 2027 (Expected)",
     academicFocus: [
-      "Artificial Intelligence Principles",
-      "Machine Learning Algorithms & Optimization",
+      "Artificial Intelligence & Machine Learning (VTU)",
+      "Generative AI & Agentic Systems",
+      "Large Language Models & Fine-Tuning (QLoRA / PEFT)",
+      "LangChain & LangGraph Orchestration",
       "Deep Learning & Neural Architectures",
-      "Computer Vision & Digital Image Processing",
       "Natural Language Processing (NLP)",
-      "Generative AI & Transformer Models",
-      "Software Engineering & System Design",
       "Data Structures & Applied Algorithms",
+      "Backend AI Engineering & System Design",
     ],
     details:
-      "Core engineering degree with dedicated specialization in applied artificial intelligence, mathematical optimization, autonomous systems, and enterprise software engineering.",
+      "Pursuing B.E. in Artificial Intelligence & Machine Learning at Sri Sairam College of Engineering, Bengaluru | Affiliated with Visvesvaraya Technological University (VTU) | Expected Graduation: 2027 | Current CGPA: 7.975 / 10.",
   },
 ];

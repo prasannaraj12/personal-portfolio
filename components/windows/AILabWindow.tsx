@@ -20,10 +20,17 @@ export function AILabWindow() {
   const researchDomains = [
     {
       id: "agentic",
-      title: "Agentic AI & Swarm Orchestration",
+      title: "Agentic AI & LangGraph Workflows",
       icon: BotRegular,
-      focus: "Orchestrator-worker pipelines with self-healing ingestion loops",
-      system: "CrawlNews & Multi-Source Synthesis",
+      focus: "LangGraph ReAct cyclical graphs and orchestrator-worker pipelines with 5 custom tools",
+      system: "AgentDB & CrawlNews",
+    },
+    {
+      id: "finetuning",
+      title: "LLM Fine-Tuning (QLoRA / PEFT)",
+      icon: BrainCircuitRegular,
+      focus: "Supervised fine-tuning with LoRA/QLoRA, Unsloth, TRL & bitsandbytes 4-bit quantization",
+      system: "Qwen Fine-Tuned Model",
     },
     {
       id: "vision",
@@ -83,6 +90,20 @@ export function AILabWindow() {
 
   const modelsCatalog = [
     {
+      name: "AgentDB ReAct Reasoning Graph",
+      architecture: "LangGraph StateGraph + 5 LangChain Tools",
+      task: "Autonomous SQL Reasoning & Schema Visualization",
+      accuracy: "< 2s Latency",
+      status: "50+ Queries Validated",
+    },
+    {
+      name: "Qwen Fine-Tuned Model (QLoRA / PEFT)",
+      architecture: "Qwen + LoRA + bitsandbytes 4-bit NF4",
+      task: "Domain-Specific Supervised Fine-Tuning",
+      accuracy: "60%+ VRAM Saved",
+      status: "Evaluation Benchmarks Verified",
+    },
+    {
       name: "TRUST-CV Face Anti-Spoofing Net",
       architecture: "MobileNetV2 + Texture Analysis",
       task: "Biometric Liveness Detection",
@@ -104,10 +125,10 @@ export function AILabWindow() {
       status: "Production Verified",
     },
     {
-      name: "CrawlNews Fact-Verification Swarm",
-      architecture: "Multi-Agent Orchestrator-Worker",
-      task: "Automated Scraping & Claim Cross-Checking",
-      accuracy: "Deterministic Rules Engine",
+      name: "CrawlNews News Intelligence Swarm",
+      architecture: "Multi-Agent Orchestrator (31 RSS Feeds)",
+      task: "Automated Scraping, Deduplication & Summarization",
+      accuracy: "15-Min Scheduled Cycle",
       status: "Production Verified",
     },
   ];

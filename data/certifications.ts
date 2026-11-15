@@ -2,6 +2,45 @@ import { CertificationItem } from "@/types";
 
 export const certificationsData: CertificationItem[] = [
   {
+    id: "tata-data-vis",
+    title: "Data Visualization: Empowering Business with Effective Insights",
+    issuer: "Tata Group / Forage (2025)",
+    skillsGained: [
+      "Visual Analytics",
+      "Executive Insights",
+      "Data Storytelling",
+      "Business Intelligence",
+    ],
+    summary:
+      "Industry simulation focused on translating complex enterprise operational data into high-impact visual charts, executive dashboards, and actionable business insights.",
+  },
+  {
+    id: "databricks-fundamentals",
+    title: "Databricks Fundamentals",
+    issuer: "Databricks (2025)",
+    skillsGained: [
+      "Lakehouse Architecture",
+      "Apache Spark",
+      "Cloud Data Engineering",
+      "Scalable Compute",
+    ],
+    summary:
+      "Core principles of Databricks Lakehouse architecture, unified data analytics, distributed data processing, and enterprise machine learning workflows.",
+  },
+  {
+    id: "ibm-ai-fundamentals",
+    title: "AI Fundamentals",
+    issuer: "IBM (2025)",
+    skillsGained: [
+      "Artificial Intelligence",
+      "Neural Networks",
+      "Generative AI",
+      "Responsible & Ethical AI",
+    ],
+    summary:
+      "Fundamental grounding in artificial intelligence mechanics, deep learning architectures, foundation models, and ethical AI deployment standards.",
+  },
+  {
     id: "infosys-genai",
     title: "Principle of Generative AI",
     issuer: "Infosys Springboard",
@@ -13,32 +52,6 @@ export const certificationsData: CertificationItem[] = [
     ],
     summary:
       "Comprehensive grounding in generative modeling fundamentals, large language models, prompt framing, and generative solution lifecycles.",
-  },
-  {
-    id: "ibm-data-analysis",
-    title: "Data Analysis with Python",
-    issuer: "IBM CognitiveClass.ai",
-    skillsGained: [
-      "Python Data Pipelines",
-      "Pandas & NumPy",
-      "Exploratory Data Analysis (EDA)",
-      "Model Evaluation",
-    ],
-    summary:
-      "Practical data wrangling, descriptive statistics, regression modeling, and pipeline development using Python analytics tooling.",
-  },
-  {
-    id: "ibm-ml-python",
-    title: "Machine Learning with Python",
-    issuer: "IBM CognitiveClass.ai",
-    skillsGained: [
-      "Supervised & Unsupervised Learning",
-      "Classification & Regression Algorithms",
-      "Clustering Techniques",
-      "Scikit-learn Pipelines",
-    ],
-    summary:
-      "Core machine learning algorithmic design, decision trees, support vector machines, clustering, and cross-validation.",
   },
   {
     id: "ibm-prompt-eng",
@@ -54,30 +67,17 @@ export const certificationsData: CertificationItem[] = [
       "Systematic strategies for eliciting high-precision outputs from LLMs, reducing hallucinations, and structuring complex generative workflows.",
   },
   {
-    id: "greatlearning-ds",
-    title: "Data Science Foundations",
-    issuer: "Great Learning",
+    id: "ibm-ml-python",
+    title: "Machine Learning with Python",
+    issuer: "IBM CognitiveClass.ai",
     skillsGained: [
-      "Statistical Inference",
-      "Data Science Lifecycle",
-      "Feature Engineering",
-      "Model Interpretability",
+      "Supervised & Unsupervised Learning",
+      "Classification & Regression",
+      "Clustering Techniques",
+      "Scikit-learn Pipelines",
     ],
     summary:
-      "Core foundational principles of modern data science, experimental design, and quantitative decision-making frameworks.",
-  },
-  {
-    id: "nptel-tableau",
-    title: "Data to Dashboard: Mastering Visual Storytelling with Tableau",
-    issuer: "NPTEL",
-    skillsGained: [
-      "Interactive Dashboard Design",
-      "Visual Analytics & Storytelling",
-      "Calculated Fields",
-      "Executive Data Presentation",
-    ],
-    summary:
-      "Rigorous academic certification on transforming raw enterprise datasets into intuitive visual storytelling dashboards.",
+      "Core machine learning algorithmic design, decision trees, support vector machines, clustering, and cross-validation.",
   },
   {
     id: "ibm-watsonx",

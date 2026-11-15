@@ -5,6 +5,7 @@ import { profileData } from "@/data/profile";
 import { projectsData } from "@/data/projects";
 import { experienceData } from "@/data/experience";
 import { educationData } from "@/data/education";
+import { certificationsData } from "@/data/certifications";
 import {
   DismissRegular,
   DocumentTextRegular,
@@ -122,20 +123,20 @@ export function RecruiterModal({ isOpen, onClose, onOpenApp }: RecruiterModalPro
           {/* Quick Stats Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
             <div className="p-3 rounded-[4px] bg-[#202020] border border-[#2d2d2d]">
-              <p className="text-lg font-bold font-mono text-[#4CC2FF]">8</p>
+              <p className="text-lg font-bold font-mono text-[#4CC2FF]">{projectsData.length}</p>
               <p className="text-[11px] text-[#A8AFBA] mt-0.5">Production Systems</p>
             </div>
             <div className="p-3 rounded-[4px] bg-[#202020] border border-[#2d2d2d]">
-              <p className="text-lg font-bold font-mono text-[#10B981]">210 / 210</p>
-              <p className="text-[11px] text-[#A8AFBA] mt-0.5">Tests Passed (TRUST-CV)</p>
+              <p className="text-lg font-bold font-mono text-[#10B981]">7.975</p>
+              <p className="text-[11px] text-[#A8AFBA] mt-0.5">Engineering CGPA</p>
             </div>
             <div className="p-3 rounded-[4px] bg-[#202020] border border-[#2d2d2d]">
-              <p className="text-lg font-bold font-mono text-[#A78BFA]">5</p>
-              <p className="text-[11px] text-[#A8AFBA] mt-0.5">Industry Certifications</p>
+              <p className="text-lg font-bold font-mono text-[#A78BFA]">{certificationsData.length}</p>
+              <p className="text-[11px] text-[#A8AFBA] mt-0.5">Verified Credentials</p>
             </div>
             <div className="p-3 rounded-[4px] bg-[#202020] border border-[#2d2d2d]">
-              <p className="text-lg font-bold font-mono text-[#FACC15]">3</p>
-              <p className="text-[11px] text-[#A8AFBA] mt-0.5">Hackathons Won</p>
+              <p className="text-lg font-bold font-mono text-[#FACC15]">3x</p>
+              <p className="text-[11px] text-[#A8AFBA] mt-0.5">National Finalist</p>
             </div>
           </div>
 
@@ -225,7 +226,7 @@ export function RecruiterModal({ isOpen, onClose, onOpenApp }: RecruiterModalPro
                 {educationData[0].institution}
               </p>
               <p className="text-[11px] text-[#A8AFBA] leading-relaxed">
-                Specialization in AI, Machine Learning, Computer Vision & NLP.
+                Specialization in Generative AI, LLM Applications, Agentic AI & Fine-Tuning.
               </p>
             </div>
           </div>

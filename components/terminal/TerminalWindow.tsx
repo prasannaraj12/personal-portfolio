@@ -147,7 +147,7 @@ export function TerminalWindow({ onOpenApp }: { onOpenApp?: (appId: string) => v
               <div key={i}>
                 <p className="text-[#FFFFFF] font-bold">{edu.degree}</p>
                 <p className="text-[#4CC2FF] text-[11px]">{edu.institution}, {edu.location}</p>
-                <p className="text-[10px] font-mono text-[#A8AFBA]">{edu.period || "Undergraduate Engineering"}</p>
+                <p className="text-[10px] font-mono text-[#10B981]">CGPA: 7.975 / 10 • VTU • {edu.period || "Expected 2027"}</p>
               </div>
             ))}
           </div>
@@ -195,7 +195,7 @@ export function TerminalWindow({ onOpenApp }: { onOpenApp?: (appId: string) => v
         output = (
           <div className="text-xs space-y-1 font-mono">
             <p className="text-[#4CC2FF]">GitHub Profile: {profileData.links.github}</p>
-            <p className="text-[#A8AFBA]">8 Production repositories verified with automated tests.</p>
+            <p className="text-[#A8AFBA]">{projectsData.length} production repositories verified with automated tests.</p>
           </div>
         );
         break;
@@ -203,7 +203,7 @@ export function TerminalWindow({ onOpenApp }: { onOpenApp?: (appId: string) => v
       case "resume":
         output = (
           <div className="text-xs space-y-1 font-mono">
-            <p className="text-[#FFFFFF] font-semibold">Prasannaraj — Curriculum Vitae</p>
+            <p className="text-[#FFFFFF] font-semibold">{profileData.name} — Curriculum Vitae</p>
             <p className="text-[#4CC2FF]">{profileData.role} | {profileData.college}</p>
             <p className="text-[#A8AFBA]">Type 'projects' or 'skills' for details, or open the Resume app on desktop.</p>
           </div>
@@ -227,7 +227,7 @@ export function TerminalWindow({ onOpenApp }: { onOpenApp?: (appId: string) => v
               <p><span className="text-[#FFFFFF]">Kernel:</span> Windows Terminal 1.19</p>
               <p><span className="text-[#FFFFFF]">Uptime:</span> 210 / 210 Tests Verified</p>
               <p><span className="text-[#FFFFFF]">Shell:</span> PowerShell 7.4.1</p>
-              <p><span className="text-[#FFFFFF]">Primary Stack:</span> Python, PyTorch, FastAPI, TypeScript</p>
+              <p><span className="text-[#FFFFFF]">Primary Stack:</span> Python, LangGraph, FastAPI, QLoRA, TypeScript</p>
               <p><span className="text-[#FFFFFF]">Verification:</span> 100% Verified Truth</p>
             </div>
           </div>

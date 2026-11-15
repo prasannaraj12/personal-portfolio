@@ -297,7 +297,7 @@ export function ResumeWindow() {
               ref={iframeRef}
               src={`/Prasannaraj_Resume.pdf#toolbar=0&navpanes=0&scrollbar=1`}
               className="w-full h-full border-0 block"
-              title="Prasannaraj Resume PDF"
+              title="Prasanna Raj R Resume PDF"
               onLoad={() => {
                 setIsLoading(false);
                 setHasError(false);

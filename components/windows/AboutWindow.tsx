@@ -111,7 +111,7 @@ const DRIVES: DriveInfo[] = [
     letter: "F:",
     name: "PROJECTS",
     label: "F: PROJECTS",
-    subtitle: "8 Engineering Projects",
+    subtitle: "10 Engineering Projects",
     used: "480 GB",
     total: "1.2 TB",
     percent: 40,
@@ -207,16 +207,26 @@ export function AboutWindow({ onOpenApp }: AboutWindowProps) {
   const osFolders = [
     { id: "profile", name: "Profile", type: "Candidate Bio & Overview", app: "about" },
     { id: "resume", name: "Resume.pdf", type: "PDF Document", app: "resume" },
-    { id: "experience", name: "Experience", type: "Work History (CCI)", app: "experience" },
-    { id: "education", name: "Education", type: "BE AIML Degree", app: "education" },
-    { id: "certifications", name: "Certifications", type: "7 Verified Credentials", app: "certifications" },
-    { id: "achievements", name: "Achievements", type: "Hackathons & Awards", app: "achievements" },
+    { id: "experience", name: "Experience", type: "3 Internships & Experience", app: "experience" },
+    { id: "education", name: "Education", type: "BE AIML Degree (VTU 2027)", app: "education" },
+    { id: "certifications", name: "Certifications", type: "Verified Credentials", app: "certifications" },
+    { id: "achievements", name: "Achievements", type: "3x National Finalist & Awards", app: "achievements" },
     { id: "contact", name: "Contact & Inquiries", type: "Direct Comms", app: "contact" },
     { id: "settings", name: "Settings", type: "Technical Skills Matrix", app: "skills" },
   ];
 
   // D: AI Lab Categories
   const aiCategories = [
+    {
+      domain: "Generative AI & Agents",
+      projects: ["agentdb", "crawlnews", "urbanbloom-ai"],
+      desc: "LangGraph ReAct database agents, multi-agent news intelligence & Gemini IoT",
+    },
+    {
+      domain: "LLM Fine-Tuning",
+      projects: ["llm-finetuning-qwen"],
+      desc: "Supervised fine-tuning with LoRA/QLoRA, Unsloth, TRL & bitsandbytes 4-bit quantization",
+    },
     {
       domain: "Computer Vision",
       projects: ["trust-cv", "fakeo", "player-reid", "chest-xray-ai"],
@@ -226,11 +236,6 @@ export function AboutWindow({ onOpenApp }: AboutWindowProps) {
       domain: "Remote Sensing",
       projects: ["satquery-ai", "trust-cv"],
       desc: "Multispectral satellite VQA, captioning & EO cryptographical chains",
-    },
-    {
-      domain: "Generative AI & Agents",
-      projects: ["crawlnews", "urbanbloom-ai"],
-      desc: "Multi-agent news orchestration, automated verification & Gemini IoT",
     },
     {
       domain: "Machine Learning & NLP",
@@ -305,16 +310,18 @@ export function AboutWindow({ onOpenApp }: AboutWindowProps) {
     },
   ];
 
-  // F: 8 Projects
+  // F: 10 Projects
   const projectFolders = [
-    { prefix: "01", id: "trust-cv", name: "01_TRUST-CV" },
-    { prefix: "02", id: "satquery-ai", name: "02_SATQUERY_AI" },
+    { prefix: "01", id: "agentdb", name: "01_AGENTDB" },
+    { prefix: "02", id: "llm-finetuning-qwen", name: "02_LLM_FINETUNING_QWEN" },
     { prefix: "03", id: "crawlnews", name: "03_CRAWLNEWS" },
-    { prefix: "04", id: "fakeo", name: "04_FAKEO" },
-    { prefix: "05", id: "urbanbloom-ai", name: "05_URBANBLOOM_AI" },
-    { prefix: "06", id: "player-reid", name: "06_PLAYER_REIDENTIFICATION" },
-    { prefix: "07", id: "rentyourmate", name: "07_RENTYOURMATE" },
-    { prefix: "08", id: "chest-xray-ai", name: "08_CHEST_XRAY_AI" },
+    { prefix: "04", id: "rentyourmate", name: "04_RENTYOURMATE" },
+    { prefix: "05", id: "trust-cv", name: "05_TRUST-CV" },
+    { prefix: "06", id: "satquery-ai", name: "06_SATQUERY_AI" },
+    { prefix: "07", id: "fakeo", name: "07_FAKEO" },
+    { prefix: "08", id: "urbanbloom-ai", name: "08_URBANBLOOM_AI" },
+    { prefix: "09", id: "player-reid", name: "09_PLAYER_REIDENTIFICATION" },
+    { prefix: "10", id: "chest-xray-ai", name: "10_CHEST_XRAY_AI" },
   ];
 
   const selectedProjectData = projectsData.find((p) => p.id === selectedItem);
@@ -412,7 +419,7 @@ export function AboutWindow({ onOpenApp }: AboutWindowProps) {
                   AI / ML Engineer · Developer · Builder
                 </p>
                 <p className="text-[11px] text-[#A8AFBA] font-mono mt-1">
-                  Machine: PRASANNARAJ-WORKSTATION • OS: Portfolio OS 24H2 • 8 Verified Projects
+                  Machine: PRASANNARAJ-WORKSTATION • OS: Portfolio OS 24H2 • 10 Verified Projects
                 </p>
               </div>
             </div>
@@ -888,7 +895,7 @@ export function AboutWindow({ onOpenApp }: AboutWindowProps) {
                   F:\PROJECTS
                 </h2>
                 <p className="text-[11px] text-[#A8AFBA]">
-                  8 Verified Production & Research Systems (Double-click to open)
+                  10 Verified Production & Research Systems (Double-click to open)
                 </p>
               </div>
 

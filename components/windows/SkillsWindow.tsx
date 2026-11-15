@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { skillsData } from "@/data/skills";
 import { profileData } from "@/data/profile";
 import {
-  SettingsFilled,
   SearchRegular,
   BrainCircuitRegular,
   SparkleRegular,
@@ -13,12 +12,11 @@ import {
   CheckmarkCircleRegular,
   CodeRegular,
   WindowConsoleRegular,
-  PersonRegular,
   ChevronRightRegular,
 } from "@/components/icons/FluentIcons";
 
 export function SkillsWindow() {
-  const [selectedSection, setSelectedSection] = useState<string>("ai-ml");
+  const [selectedSection, setSelectedSection] = useState<string>("gen-ai");
   const [searchQuery, setSearchQuery] = useState<string>("");
 
   const settingsNav = [
@@ -29,46 +27,53 @@ export function SkillsWindow() {
       subtitle: "Workstation profile & specifications",
     },
     {
+      id: "gen-ai",
+      title: "Generative AI & LLM",
+      icon: SparkleRegular,
+      subtitle: "LLMs, RAG, Agentic AI, LangChain & LangGraph",
+      categoryKey: "GENERATIVE AI & LLM",
+    },
+    {
+      id: "fine-tuning",
+      title: "LLM Fine-Tuning",
+      icon: BrainCircuitRegular,
+      subtitle: "SFT, PEFT, LoRA/QLoRA, Unsloth & bitsandbytes",
+      categoryKey: "LLM FINE-TUNING",
+    },
+    {
       id: "ai-ml",
       title: "AI & Machine Learning",
       icon: BrainCircuitRegular,
-      subtitle: "Models, Computer Vision, & Deep Learning",
+      subtitle: "Machine Learning, Deep Learning, NLP & Transformers",
       categoryKey: "AI / ML",
     },
     {
-      id: "gen-ai",
-      title: "Generative AI & Agents",
-      icon: SparkleRegular,
-      subtitle: "LLMs, RAG systems, & Multi-Agent swarms",
-      categoryKey: "GENERATIVE AI & AGENTS",
-    },
-    {
       id: "dev-lang",
-      title: "Languages & Core",
+      title: "Programming Languages",
       icon: CodeRegular,
-      subtitle: "Python, TypeScript, SQL, & Logic",
+      subtitle: "Python, SQL, TypeScript & JavaScript",
       categoryKey: "PROGRAMMING",
     },
     {
-      id: "frameworks",
-      title: "Frameworks & Backend",
+      id: "backend",
+      title: "Backend & Systems",
       icon: AppsRegular,
-      subtitle: "PyTorch, FastAPI, React, & OpenCV",
-      categoryKey: "FRAMEWORKS & LIBRARIES",
+      subtitle: "FastAPI, Node.js, Express, Docker, SQLite & PostgreSQL",
+      categoryKey: "BACKEND",
     },
     {
-      id: "databases",
-      title: "Databases & Storage",
+      id: "frontend",
+      title: "Frontend & Mobile",
       icon: DesktopRegular,
-      subtitle: "PostgreSQL, SQLite, & Firebase",
-      categoryKey: "DATABASES & CLOUD",
+      subtitle: "React, TypeScript, Flutter, Vite & Tailwind CSS",
+      categoryKey: "FRONTEND",
     },
     {
       id: "tools",
-      title: "Developer Tools & Automation",
+      title: "Tools & Analytics",
       icon: WindowConsoleRegular,
-      subtitle: "Git, GitHub, Docker, & n8n",
-      categoryKey: "DEVELOPER TOOLS & AUTOMATION",
+      subtitle: "Git, GitHub, n8n, Pandas, Matplotlib, Power BI & Tableau",
+      categoryKey: "TOOLS & ANALYTICS",
     },
   ];
 
@@ -176,8 +181,12 @@ export function SkillsWindow() {
                   <span className="text-[#FFFFFF]">{profileData.name}</span>
                 </div>
                 <div>
-                  <span className="text-[#A8AFBA]">Degree: </span>
-                  <span className="text-[#FFFFFF]">{profileData.degree}</span>
+                  <span className="text-[#A8AFBA]">Degree & Academic: </span>
+                  <span className="text-[#FFFFFF]">{profileData.degree} • VTU (2027)</span>
+                </div>
+                <div>
+                  <span className="text-[#A8AFBA]">CGPA: </span>
+                  <span className="text-[#10B981] font-mono font-medium">7.975 / 10</span>
                 </div>
                 <div>
                   <span className="text-[#A8AFBA]">Institution: </span>
@@ -185,11 +194,11 @@ export function SkillsWindow() {
                 </div>
                 <div>
                   <span className="text-[#A8AFBA]">Current Focus: </span>
-                  <span className="text-[#10B981] font-medium">{profileData.role}</span>
+                  <span className="text-[#4CC2FF] font-medium">Generative AI • Agentic Systems • Fine-Tuning</span>
                 </div>
-                <div>
-                  <span className="text-[#A8AFBA]">System Experience: </span>
-                  <span className="text-[#FFFFFF]">Crawl Corp India (CCI)</span>
+                <div className="sm:col-span-2">
+                  <span className="text-[#A8AFBA]">Current Role: </span>
+                  <span className="text-[#FFFFFF]">Junior AI Engineer Intern — Crawl Corp India Private Limited</span>
                 </div>
               </div>
             </div>

@@ -83,7 +83,7 @@ export function Desktop() {
   const [isRecruiterOpen, setIsRecruiterOpen] = useState(false);
 
   // Project detail active project
-  const [selectedProjectId, setSelectedProjectId] = useState<string>("trust-cv");
+  const [selectedProjectId, setSelectedProjectId] = useState<string>("agentdb");
 
   // Windows initial configuration
   const [windows, setWindows] = useState<Record<string, WindowState>>({
@@ -188,7 +188,7 @@ export function Desktop() {
     },
     resume: {
       id: "resume",
-      title: "Resume — Prasannaraj",
+      title: "Resume — Prasanna Raj R",
       icon: "Resume",
       isOpen: false,
       isMinimized: false,
